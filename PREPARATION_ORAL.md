@@ -144,8 +144,8 @@ Le jury valorise l'honnêteté et la méthode, pas le fait de tout savoir.
 ## 6. Checklist avant mercredi
 
 - [ ] Relire **tout** le portfolio et corriger ce qui n'est pas exact te concernant (stage METM, niveaux, parcours).
-- [ ] Compléter l'e-mail et le lien LinkedIn dans la section Contact (`index.html`, commentaires « À COMPLÉTER »).
-- [ ] Ajouter les images dans `images/` : `proxmox.png` (capture de ton Proxmox) et `stage-metm.png` (facultatif).
+- [ ] Compléter l'e-mail et le lien LinkedIn dans la section Contact (`src/sections/Contact.tsx`, constantes `EMAIL` et `LINKEDIN` en haut du fichier).
+- [ ] Ajouter les images dans `public/images/` : `proxmox.png` (capture de ton Proxmox) et `stage-metm.png` (facultatif).
 - [ ] Préparer 3 phrases sur Proxmox, METM et Flux Master.
 - [ ] Réviser les bases réseau listées plus haut.
 - [ ] Répéter l'oral **à voix haute 3 fois**, chronométré.
