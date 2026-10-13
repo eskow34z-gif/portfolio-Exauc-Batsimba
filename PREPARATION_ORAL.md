@@ -1,6 +1,6 @@
 # Préparation à l'oral : veille technologique et portfolio
 
-> Document de travail **personnel**, à ne pas mettre en ligne (il est hors du dossier `src/` déployé sur Vercel).
+> Document de travail **personnel**, à ne pas mettre en ligne (il est exclue du déploiement Vercel via `.vercelignore`).
 > Objectif : savoir **présenter**, **expliquer** et surtout **te défendre** face aux questions du jury.
 
 ---
@@ -144,8 +144,8 @@ Le jury valorise l'honnêteté et la méthode, pas le fait de tout savoir.
 ## 6. Checklist avant mercredi
 
 - [ ] Relire **tout** le portfolio et corriger ce qui n'est pas exact te concernant (stage METM, niveaux, parcours).
-- [ ] Compléter l'e-mail et le lien LinkedIn dans la section Contact (`src/index.html`, commentaires « À COMPLÉTER »).
-- [ ] Ajouter les images dans `src/images/` : `proxmox.png` (capture de ton Proxmox) et `stage-metm.png` (facultatif).
+- [ ] Compléter l'e-mail et le lien LinkedIn dans la section Contact (`index.html`, commentaires « À COMPLÉTER »).
+- [ ] Ajouter les images dans `images/` : `proxmox.png` (capture de ton Proxmox) et `stage-metm.png` (facultatif).
 - [ ] Préparer 3 phrases sur Proxmox, METM et Flux Master.
 - [ ] Réviser les bases réseau listées plus haut.
 - [ ] Répéter l'oral **à voix haute 3 fois**, chronométré.
