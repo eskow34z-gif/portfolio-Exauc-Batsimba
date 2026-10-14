@@ -20,43 +20,43 @@ type Spec = {
 
 const SPECS: Spec[] = [
   {
-    key: "gen", name: "IA générative", short: "Générative",
+    key: "gen", name: "IA générative (texte)", short: "Générative",
     def: "C'est l'IA qu'on connaît tous : ChatGPT, Claude, Gemini. Elle a lu énormément de textes, et elle écrit une réponse en devinant, mot après mot, la suite la plus probable.",
-    tools: "ChatGPT, Claude, Gemini.", logos: ["openai", "claude", "gemini"],
-    usage: "Expliquer un message d'erreur, aider à écrire une procédure ou un petit script.",
-    me: "Je m'en sers comme d'un prof particulier : quand je ne comprends pas une notion, je lui demande de m'expliquer, puis je vérifie dans le cours.",
-    limits: "Elle peut se tromper avec beaucoup d'assurance (on appelle ça une « hallucination »). Et il ne faut jamais lui coller un mot de passe.",
+    tools: "Groq et Gemini (dans Flux Master), Claude.", logos: ["gemini", "claude"],
+    usage: "Lire un texte et en sortir l'essentiel, aider à écrire du code ou une procédure.",
+    me: "Dans Flux Master, une IA lit la description de chaque bonne affaire et en sort les défauts et les frais à prévoir (par exemple « embrayage à changer »). Si un fournisseur d'IA ne répond pas, le script passe automatiquement au suivant : c'est de la redondance, comme en réseau.",
+    limits: "Elle peut se tromper avec assurance (une « hallucination »). Dans Flux Master, son avis s'ajoute au calcul, il ne le remplace pas.",
   },
   {
-    key: "cyber", name: "IA de cybersécurité", short: "Cybersécurité",
-    def: "Une IA qui apprend comment un ordinateur se comporte d'habitude, et qui donne l'alerte quand quelque chose est anormal. Par exemple un programme qui se met à chiffrer des centaines de fichiers d'un coup.",
-    tools: "Microsoft Defender (l'antivirus de Windows en version entreprise).",
-    usage: "Repérer un rançongiciel (ransomware) avant qu'il bloque tous les fichiers de l'entreprise.",
-    me: "Le technicien ne lit plus tout lui-même : l'IA trie les alertes, et lui décide si c'est grave ou pas.",
-    limits: "Elle peut sonner pour rien, ou rater une vraie attaque. Et les pirates utilisent aussi l'IA, par exemple pour écrire de faux e-mails très crédibles.",
+    key: "vision", name: "IA de vision", short: "Vision",
+    def: "Une IA spécialisée dans les images : elle « regarde » une photo et décrit ce qu'elle voit.",
+    tools: "Gemini Vision (dans Flux Master).", logos: ["gemini"],
+    usage: "Repérer un défaut sur une photo, lire un document scanné, reconnaître un objet.",
+    me: "Dans Flux Master, une IA de vision examine les photos d'une annonce : état général, voyants allumés au tableau de bord, et les zones que le vendeur n'a pas montrées.",
+    limits: "Une photo ne montre pas tout : l'analyse reste prudente et donne un niveau de confiance, pas une certitude.",
+  },
+  {
+    key: "cyber", name: "IA de cybersécurité / anti-fraude", short: "Anti-fraude",
+    def: "Une IA qui repère ce qui est anormal ou suspect : un programme dangereux sur un ordinateur, ou une arnaque dans une annonce.",
+    tools: "Microsoft Defender (ordinateurs), agent anti-fraude de Flux Master (annonces).",
+    usage: "Bloquer un rançongiciel, détecter une fausse annonce avant qu'un acheteur se fasse piéger.",
+    me: "J'ai développé un agent anti-fraude pour Flux Master : quand une annonce arrive, une IA lui donne une note de risque de 0 à 100. Au-dessus de 70, l'annonce est mise en quarantaine au lieu d'être publiée.",
+    limits: "Elle peut bloquer une vraie annonce ou laisser passer une arnaque. Et les fraudeurs utilisent aussi l'IA pour rendre leurs annonces plus crédibles.",
   },
   {
     key: "aiops", name: "IA de supervision", short: "Supervision",
-    def: "Une IA qui surveille les serveurs (mémoire, disque, vitesse) et qui prévient avant qu'une panne arrive.",
-    tools: "Datadog.", logos: ["datadog"],
-    usage: "Être prévenu qu'un disque sera plein dans 3 jours, au lieu de le découvrir quand le serveur plante.",
-    me: "On passe de « je répare quand ça casse » à « je suis prévenu avant que ça casse ».",
-    limits: "Ces outils coûtent cher, et il faut quand même comprendre ce qu'ils affichent.",
-  },
-  {
-    key: "net", name: "IA réseau", short: "Réseau",
-    def: "Une IA spécialisée dans le réseau : elle cherche pourquoi la connexion est lente ou coupée, et propose une correction.",
-    tools: "Cisco AI Assistant.", logos: ["cisco"],
-    usage: "Répondre à une question comme « pourquoi le Wi-Fi de la salle B est lent ? ».",
-    me: "C'est celle qui me concerne le plus : pour savoir si sa correction est bonne, il faut connaître le réseau. C'est une raison de plus de rattraper mon retard.",
-    limits: "Si elle applique une mauvaise correction toute seule, elle peut couper le réseau de toute l'entreprise.",
+    def: "Une IA qui surveille un système en permanence et prévient quand quelque chose ne va pas, idéalement avant la panne.",
+    tools: "Datadog (en entreprise), mes agents d'audit (Flux Master).", logos: ["datadog"],
+    usage: "Être prévenu qu'un disque ou une base de données sera bientôt pleine.",
+    me: "Chaque lundi, un agent IA fait l'audit de Flux Master : taille de la base de données (limite gratuite de 500 Mo), calculs qui échouent, sites qui ne renvoient plus d'annonces, failles de sécurité. Il m'écrit un rapport.",
+    limits: "Il faut quand même savoir lire son rapport et décider soi-même. Et un agent peut rater un problème.",
   },
   {
     key: "agents", name: "Agents IA", short: "Agents",
     def: "Une IA qui ne se contente pas de répondre : elle agit. Elle peut utiliser des outils (lire un fichier, consulter un site, lancer une action), regarder le résultat, puis continuer.",
-    tools: "Claude Code, et le MCP pour les brancher sur des outils.", logos: ["claude", "mcp"],
-    usage: "Chercher pourquoi un site ne marche plus en lisant ses journaux, ou préparer une modification à valider.",
-    me: "Sur Flux Master, des agents IA font un audit chaque lundi (sécurité, taille de la base de données, robots en panne). Ils proposent leurs corrections, mais c'est moi qui relis et qui valide. C'est l'innovation que j'ai choisie, je la détaille plus bas.",
+    tools: "Claude Code, branché sur GitHub, Vercel et la base de données grâce au MCP.", logos: ["claude", "mcp"],
+    usage: "Corriger un bug, préparer une modification, faire un audit.",
+    me: "Je développe Flux Master avec un agent IA. Mes agents ont des règles strictes : ils ne suppriment rien et ne mettent rien en ligne seuls. Ils proposent, et c'est moi qui relis et valide. C'est l'innovation que j'ai choisie, je la détaille plus bas.",
     limits: "Quand un agent se trompe, il ne fait pas qu'écrire une bêtise : il l'exécute. Il faut donc limiter ses droits et valider ce qu'il fait.",
   },
 ]
@@ -94,7 +94,7 @@ export function Veille() {
         </h2>
         <Reveal delay={0.2}>
           <p className="mt-8 max-w-2xl text-xl leading-relaxed text-soft">
-            Ma veille ne porte pas sur l'IA en général, mais sur les <strong className="text-white">IA spécialisées</strong> qui changent concrètement le travail d'un technicien systèmes &amp; réseaux.
+            Ma veille ne porte pas sur l'IA en général, mais sur les <strong className="text-white">IA spécialisées</strong>. Et je l'ai tournée vers le projet que j'utilise le plus : <strong className="text-white">Flux Master</strong>, où j'en utilise déjà plusieurs.
           </p>
         </Reveal>
 
@@ -107,7 +107,7 @@ export function Veille() {
             <div className="relative rounded-[28px] bg-[linear-gradient(135deg,rgba(139,92,246,0.14),rgba(5,4,10,0.92)_60%)] px-7 py-10 md:px-14 md:py-16">
               <div className="eyebrow">Problématique</div>
               <p className="mt-5 text-[clamp(1.6rem,3.4vw,3rem)] font-medium leading-[1.15] tracking-[-0.03em]">
-                Quelles <span className="font-serif italic text-gradient">IA spécialisées</span> transforment le métier d'administrateur systèmes &amp; réseaux, et comment les utiliser <span className="font-serif italic text-gradient">sans créer de nouveaux risques</span> ?
+                Comment des <span className="font-serif italic text-gradient">IA spécialisées</span> peuvent faire tourner et surveiller une application comme Flux Master, <span className="font-serif italic text-gradient">sans créer de nouveaux risques</span> ?
               </p>
             </div>
           </div>
@@ -120,7 +120,7 @@ export function Veille() {
             <h3 className="mt-6 text-3xl font-semibold leading-tight tracking-[-0.03em] md:text-4xl">« L'IA a des spécialisations » : <span className="font-serif font-normal italic text-lilac">qu'est-ce que tu veux dire par là ?</span></h3>
             <div className="mt-6 space-y-4 text-[17px] leading-relaxed text-soft">
               <p>Une IA n'est pas « intelligente en général » : c'est un <strong className="text-white">modèle entraîné sur un type de données précis pour une tâche précise</strong>. L'IA qui repère un virus sur un ordinateur n'a rien à voir avec ChatGPT : elle n'a pas appris les mêmes choses et ne sait pas faire les mêmes choses.</p>
-              <p>Aujourd'hui, toutes les IA sont <strong className="text-white">spécialisées</strong> : chacune sait faire une chose. Une IA capable de tout faire comme un humain, ça n'existe pas encore. Pour un technicien SISR, j'en vois <strong className="text-white">cinq</strong> qui comptent vraiment. Les voici.</p>
+              <p>Aujourd'hui, toutes les IA sont <strong className="text-white">spécialisées</strong> : chacune sait faire une chose. Une IA capable de tout faire comme un humain, ça n'existe pas encore. Dans Flux Master, j'en utilise <strong className="text-white">cinq</strong>. Les voici, chacune avec un exemple tiré de mon projet.</p>
             </div>
           </Reveal>
 
@@ -163,7 +163,7 @@ export function Veille() {
         {/* Les 5 spécialisations */}
         <div className="mt-28">
           <Reveal>
-            <h3 className="text-[clamp(2rem,4.5vw,3.6rem)] font-semibold leading-none tracking-[-0.04em]">Les 5 spécialisations <span className="font-serif font-normal italic text-gradient">qui comptent pour un SISR.</span></h3>
+            <h3 className="text-[clamp(2rem,4.5vw,3.6rem)] font-semibold leading-none tracking-[-0.04em]">Les 5 spécialisations <span className="font-serif font-normal italic text-gradient">à l'œuvre dans Flux Master.</span></h3>
           </Reveal>
           <div className="mt-12 grid gap-6 lg:grid-cols-[320px_1fr]">
             <div role="tablist" aria-label="Spécialisations" className="flex gap-2 overflow-x-auto pb-2 lg:flex-col lg:overflow-visible lg:pb-0">

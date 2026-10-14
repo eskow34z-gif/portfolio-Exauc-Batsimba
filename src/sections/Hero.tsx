@@ -87,7 +87,7 @@ export function Hero() {
           <button onClick={() => scrollToId("profil")} className="flex items-center gap-2 text-soft hover:text-white">
             Faire défiler <ArrowDown size={15} style={{ animation: "float-y 2s ease-in-out infinite" }} />
           </button>
-          <span className="font-mono">Veille : IA spécialisées · MCP</span>
+          <span className="font-mono">Veille : l'IA dans Flux Master</span>
         </motion.div>
       </motion.div>
     </section>

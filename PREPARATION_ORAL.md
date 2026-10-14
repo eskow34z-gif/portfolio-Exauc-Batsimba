@@ -5,9 +5,9 @@
 
 ---
 
-## 1. Ton fil rouge (à retenir par cœur)
+## 1. Ton fil rouge (à retenir, avec tes mots)
 
-> « Quand on dit "l'IA", on parle en fait de plein d'IA différentes. Moi, je regarde celles qui changent le travail d'un technicien systèmes et réseaux. La plus récente, ce sont les agents IA branchés sur des outils grâce au MCP. Je m'en suis servi moi-même, et ce que j'en retiens, c'est qu'il faut connaître les bases encore mieux qu'avant. C'est aussi pour ça que je rattrape mon retard en réseau. »
+> « Quand on dit "l'IA", on parle en fait de plein d'IA différentes, chacune spécialisée dans une chose. J'ai tourné ma veille vers mon projet, Flux Master, parce que j'y utilise déjà cinq de ces IA : une qui lit les descriptions des annonces, une qui regarde les photos, une qui repère les arnaques, une qui surveille le site, et des agents qui m'aident à le développer. L'innovation la plus récente, ce sont ces agents branchés sur mes outils grâce au MCP. Ce que j'en retiens : ils proposent, mais c'est moi qui valide. Et pour valider, il faut connaître les bases. »
 
 Tout ton oral doit revenir à cette idée. Si tu te perds, reviens-y.
 
@@ -20,8 +20,8 @@ Tout ton oral doit revenir à cette idée. Si tu te perds, reviens-y.
 | 0:00 | Accroche | « Quand on dit "l'IA", on pense à ChatGPT. Mais l'IA qui détecte un ransomware n'a rien à voir avec ChatGPT. » | Titre de la section Veille |
 | 0:45 | Présentation | Nom, BTS SIO SISR, 1 phrase par projet | Hero + Projets |
 | 2:00 | Bilan honnête | Ton retard en réseau, ta prise de conscience, ce que tu fais | Carte « Bilan personnel » |
-| 3:00 | Problématique | La lire telle quelle | Encadré Problématique |
-| 3:30 | Les 5 spécialisations | 30 s chacune : définition, 1 outil réel, 1 usage, 1 limite | Les onglets |
+| 3:00 | Problématique | « Comment des IA spécialisées peuvent faire tourner et surveiller une application comme Flux Master, sans créer de nouveaux risques ? » | Encadré Problématique |
+| 3:30 | Les 5 spécialisations | 30 s chacune : ce que c'est, puis **ce qu'elle fait dans Flux Master** | Les onglets |
 | 6:00 | Méthodologie | Le cycle en 5 étapes, les sources, la grille de vérification | Section Méthode |
 | 7:30 | Innovation | MCP : USB-C de l'IA, schéma, chronologie, **ton cas vécu** | Section Innovation |
 | 9:00 | Risques et avis | 3 risques et leurs parades, puis ton avis | Fin de la section |
@@ -68,7 +68,16 @@ Les réponses sont volontairement simples. Dis-les avec tes mots, pas par cœur.
 ### Sur les spécialisations de l'IA (la remarque qu'on t'a faite)
 
 **« Tu dis que l'IA a des spécialisations. Ça veut dire quoi ? »**
-> Ça veut dire qu'il n'y a pas une seule IA. Chaque IA a appris à faire une chose précise. ChatGPT a appris à écrire du texte. L'IA d'un antivirus a appris à repérer un programme dangereux. Elles ne savent pas faire le travail l'une de l'autre. Pour un technicien, j'en ai retenu cinq : l'IA qui écrit, l'IA de cybersécurité, l'IA qui surveille les serveurs, l'IA réseau et les agents.
+> Ça veut dire qu'il n'y a pas une seule IA. Chaque IA a appris à faire une chose précise. Dans Flux Master, j'en ai cinq qui font chacune un travail différent : une lit les descriptions des annonces, une regarde les photos, une repère les arnaques, une surveille le site, et des agents m'aident à développer. Aucune ne sait faire le travail des autres.
+
+**« Pourquoi avoir tourné ta veille vers Flux Master ? »**
+> Parce que c'est le projet sur lequel je passe le plus de temps. Je préfère parler de ce que j'utilise vraiment que d'exemples lus ailleurs. Et ça me permet de montrer les limites que j'ai vues moi-même.
+
+**« Comment l'IA lit les descriptions dans Flux Master ? »**
+> Toutes les 2 heures, des robots récupèrent les annonces. Pour les bonnes affaires, un script envoie la description du vendeur à une IA (Groq, ou Gemini si Groq ne répond pas). Elle en sort les défauts et les frais à prévoir, et ça corrige la marge. Le fait de passer à une autre IA si la première ne répond pas, c'est de la redondance, comme on en fait en réseau.
+
+**« Et l'anti-fraude ? »**
+> Quand une annonce arrive, une IA lui donne une note de risque de 0 à 100. Au-dessus de 70, l'annonce part en quarantaine au lieu d'être publiée. Ça peut se tromper, donc c'est un filtre, pas un juge.
 
 **« Une IA qui sait tout faire, ça existe ? »**
 > Non, pas aujourd'hui. Toutes les IA actuelles sont spécialisées.

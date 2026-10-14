@@ -99,12 +99,25 @@
 - **IA générative :** celle qui **crée** du texte ou des images (ChatGPT, Claude, Gemini).
 - **À retenir :** chaque cercle est inclus dans le précédent, comme des poupées russes.
 
-### Les 5 spécialisations (une phrase chacune)
-1. **IA générative** : elle écrit du texte (ChatGPT). Risque : elle peut **halluciner**, c'est-à-dire inventer une réponse fausse avec assurance.
-2. **IA de cybersécurité** : elle surveille un ordinateur et donne l'alerte si quelque chose est anormal (Microsoft Defender). Exemple : un **rançongiciel** (ransomware), un programme qui chiffre tous les fichiers et demande une rançon.
-3. **IA de supervision** : elle surveille les serveurs (mémoire, disque) et prévient **avant** la panne (Datadog). Exemple : « ton disque sera plein dans 3 jours ».
-4. **IA réseau** : elle cherche pourquoi la connexion est lente ou coupée et propose une correction (Cisco AI Assistant).
-5. **Agents IA** : une IA qui **agit**. Elle utilise des outils, regarde le résultat et continue (Claude Code).
+### ⭐ Les 5 spécialisations, avec ce qu'elles font dans Flux Master
+1. **IA générative (texte)** : elle écrit et elle lit du texte (ChatGPT, Gemini, Groq).
+   - *Dans Flux Master :* elle lit la description du vendeur et en sort les défauts et les frais à prévoir (« embrayage à changer »). Si Groq ne répond pas, le script passe à Gemini : c'est de la **redondance**, comme deux câbles réseau pour qu'un seul ne fasse pas tout tomber.
+   - *Limite :* elle peut **halluciner**, c'est-à-dire inventer avec assurance. Son avis s'ajoute au calcul, il ne le remplace pas.
+2. **IA de vision** : elle « regarde » une image et décrit ce qu'elle voit (Gemini Vision).
+   - *Dans Flux Master :* elle examine les photos d'une annonce (état, voyants allumés au tableau de bord, zones non montrées).
+   - *Limite :* une photo ne montre pas tout, elle donne un niveau de confiance, pas une certitude.
+3. **IA anti-fraude / cybersécurité** : elle repère ce qui est suspect.
+   - *Dans Flux Master :* une note de risque de 0 à 100 pour chaque nouvelle annonce. Au-dessus de 70, **quarantaine** (l'annonce n'est pas publiée).
+   - *Ailleurs :* Microsoft Defender fait pareil sur un ordinateur (repérer un rançongiciel).
+   - *Limite :* elle peut bloquer une vraie annonce ou rater une arnaque.
+   - ⚠️ *À vérifier avant l'oral :* l'agent existe dans ton code. S'il n'est pas activé en ce moment, dis « j'ai développé un agent anti-fraude », sans dire qu'il tourne.
+4. **IA de supervision** : elle surveille et prévient avant la panne.
+   - *Dans Flux Master :* l'agent d'audit du lundi vérifie la taille de la base (limite gratuite de 500 Mo), les calculs qui échouent, les sites qui ne renvoient plus d'annonces et les failles de sécurité.
+   - *Ailleurs :* Datadog en entreprise.
+5. **Agents IA** : une IA qui **agit** (Claude Code).
+   - *Dans Flux Master :* tu développes avec un agent, et tes agents hebdomadaires proposent des corrections que tu valides. Règles : ils ne suppriment rien et ne mettent rien en ligne seuls.
+
+**Si on te parle de l'IA réseau** (Cisco AI Assistant) : « Je ne l'utilise pas dans Flux Master. C'est celle qui touche le plus mon option, et celle où j'ai le plus à apprendre. »
 
 ---
 
