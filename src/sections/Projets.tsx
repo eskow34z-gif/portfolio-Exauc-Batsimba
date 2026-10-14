@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { motion } from "motion/react"
 import { Briefcase, GitBranch, GitPullRequest, Rocket, Server, Eye } from "lucide-react"
 import ShineCard from "@/components/originkit/ShineCard"
@@ -25,24 +25,41 @@ function ProjectImage({ src, alt, fallback }: { src: string; alt: string; fallba
   )
 }
 
+/** Hauteur de la carte Flux Master selon la largeur d'écran (la carte a une hauteur fixe). */
+function useCardHeight() {
+  const pick = () => (window.innerWidth < 640 ? 860 : window.innerWidth < 1024 ? 680 : 600)
+  const [h, setH] = useState(pick)
+  useEffect(() => {
+    const on = () => setH(pick())
+    window.addEventListener("resize", on)
+    return () => window.removeEventListener("resize", on)
+  }, [])
+  return h
+}
+
 export function Projets() {
+  const cardHeight = useCardHeight()
   return (
     <section id="projets" className="relative mx-auto max-w-7xl px-5 py-32 md:px-10 md:py-44">
       <SectionHeader index="03" eyebrow="Projets" title="Du labo" italic="à la production." />
 
       {/* Flux Master — carte à points métalliques (OriginKit Shine Card) */}
       <Reveal className="mt-16">
-        <ShineCard height={560} highlight="#a78bfa" glow="#8b5cf6" density={42}>
-          <div className="flex h-full flex-col justify-between p-7 md:p-12">
+        <ShineCard height={cardHeight} highlight="#a78bfa" glow="#8b5cf6" density={42}>
+          <div className="pointer-events-none absolute inset-0 rounded-[28px] bg-gradient-to-b from-[#0d0b1a] via-[#0d0b1a]/90 to-[#0d0b1a]/40 md:bg-gradient-to-r md:via-[#0d0b1a]/80 md:to-transparent" />
+          <div className="relative flex h-full flex-col justify-between p-7 md:p-12">
             <div className="flex flex-wrap items-center justify-between gap-4">
               <span className="rounded-full border border-mint/40 bg-mint/10 px-3 py-1 font-mono text-[11px] uppercase tracking-widest text-mint">● En production</span>
-              <span className="font-mono text-xs text-mute">Plateforme web · Vercel</span>
+              <span className="font-mono text-xs text-mute">Voitures d'occasion · Vercel</span>
             </div>
             <div className="max-w-xl">
               <div className="font-mono text-sm text-lilac">v<Counter to={18.47} decimals={2} /></div>
               <h3 className="mt-2 text-5xl font-semibold tracking-[-0.04em] md:text-7xl">Flux <span className="font-serif font-normal italic text-gradient">Master</span></h3>
               <p className="mt-5 text-lg leading-relaxed text-soft">
-                Une plateforme web que j'ai conçue et que je maintiens. Des bêta-testeurs l'utilisent et me disent ce qui leur sert le plus et quel prix leur paraît juste. Je la développe avec un agent IA, mais rien ne part en ligne sans passer par une branche et une relecture.
+                Un comparateur d'annonces de voitures d'occasion. Il récupère les annonces de plus de 15 sites (AutoScout24, ParuVendu…) et calcule pour chaque voiture le prix du marché et la vraie marge, une fois payés la carte grise, le transport et le contrôle technique. Il dit ensuite si c'est une bonne affaire, une voiture à négocier ou à éviter.
+              </p>
+              <p className="mt-3 text-[15px] leading-relaxed text-mute">
+                Gratuit, en bêta avec de vrais testeurs. Derrière : une base de données, des robots qui collectent les annonces automatiquement, et des agents IA qui font un audit de sécurité chaque lundi.
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-2">
@@ -82,9 +99,9 @@ export function Projets() {
             <ProjectImage src="/images/stage-metm.png" alt="Réalisation pendant le stage chez METM" fallback={<div className="flex flex-col items-center gap-3 font-mono text-sm text-soft"><Briefcase size={44} className="text-lilac" />stage-metm</div>} />
             <div className="mt-6 font-mono text-[11px] uppercase tracking-widest text-mute">Stage · Entreprise</div>
             <h3 className="mt-2 text-3xl font-semibold tracking-tight">Stage chez METM</h3>
-            {/* À COMPLÉTER : décris tes vraies missions (2-3 phrases concrètes) */}
-            <p className="mt-3 text-soft">Mon premier vrai contact avec l'informatique en entreprise : du support aux utilisateurs et des interventions techniques.</p>
-            <div className="mt-5 flex flex-wrap gap-2">{["Support", "Terrain", "Entreprise"].map((t) => <span key={t} className="rounded-full border border-white/10 px-3 py-1 font-mono text-xs text-soft">{t}</span>)}</div>
+            {/* À COMPLÉTER si possible : 1 ou 2 exemples concrets de ce que tu as fait */}
+            <p className="mt-3 text-soft">Mon premier stage en entreprise, où j'ai touché aux deux côtés de l'informatique : le matériel (hardware) et les logiciels (software).</p>
+            <div className="mt-5 flex flex-wrap gap-2">{["Hardware", "Software", "Entreprise"].map((t) => <span key={t} className="rounded-full border border-white/10 px-3 py-1 font-mono text-xs text-soft">{t}</span>)}</div>
           </article>
         </Reveal>
       </div>

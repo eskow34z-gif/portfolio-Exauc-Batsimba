@@ -56,7 +56,7 @@ const SPECS: Spec[] = [
     def: "Une IA qui ne se contente pas de répondre : elle agit. Elle peut utiliser des outils (lire un fichier, consulter un site, lancer une action), regarder le résultat, puis continuer.",
     tools: "Claude Code, et le MCP pour les brancher sur des outils.", logos: ["claude", "mcp"],
     usage: "Chercher pourquoi un site ne marche plus en lisant ses journaux, ou préparer une modification à valider.",
-    me: "Je m'en sers sur Flux Master et je m'en suis servi pour ce portfolio. C'est l'innovation que j'ai choisie, je la détaille plus bas.",
+    me: "Sur Flux Master, des agents IA font un audit chaque lundi (sécurité, taille de la base de données, robots en panne). Ils proposent leurs corrections, mais c'est moi qui relis et qui valide. C'est l'innovation que j'ai choisie, je la détaille plus bas.",
     limits: "Quand un agent se trompe, il ne fait pas qu'écrire une bêtise : il l'exécute. Il faut donc limiter ses droits et valider ce qu'il fait.",
   },
 ]

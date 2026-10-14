@@ -128,7 +128,13 @@ Les réponses sont volontairement simples. Dis-les avec tes mots, pas par cœur.
 > « En TP, j'ai utilisé Proxmox pour créer des machines virtuelles, c'est-à-dire des ordinateurs simulés sur un seul serveur. Ça sert à tester sans risquer de casser un vrai poste. » Si on te pose une question plus précise : « Je ne m'en souviens plus en détail, c'est une des choses que je reprends. »
 
 **« Flux Master, c'est quoi ? »**
-> *(À préparer en 2 ou 3 phrases : ce que fait l'appli, pour qui, et comment tu la mets en ligne.)* Tu peux expliquer le chemin d'une modification : je crée une branche (une copie de travail), je fais une demande de fusion (pull request), Vercel crée une version de test, puis je mets en ligne.
+> « C'est un comparateur d'annonces de voitures d'occasion. Il récupère les annonces de plus de 15 sites et calcule pour chaque voiture le prix du marché et la vraie marge, une fois payés la carte grise, le transport et le contrôle technique. Puis il dit si c'est une bonne affaire. C'est gratuit et en bêta avec de vrais testeurs. » Ensuite, place le lien avec ta veille : les agents IA qui font un audit chaque lundi (voir `ANTISECHE.md`).
+
+**« C'est toi qui as tout codé ? »**
+> « Je l'ai conçu et je le pilote, et je développe avec un agent IA. Mon rôle, c'est de décider, de relire et de valider avant la mise en ligne. »
+
+**« Qu'est-ce que tu as fait pendant ton stage ? »**
+> « J'ai travaillé côté matériel (hardware) et côté logiciel (software). Par exemple… » *(donne 1 exemple vrai de chaque, prépare-les avant mercredi).*
 
 ### La phrase de secours (à garder en tête)
 
@@ -143,7 +149,7 @@ Un jury préfère mille fois ça à une réponse inventée.
 - [ ] Relire **tout** le portfolio et corriger ce qui n'est pas exact te concernant (stage METM, niveaux, parcours).
 - [ ] Compléter l'e-mail et le lien LinkedIn dans la section Contact (`src/sections/Contact.tsx`, constantes `EMAIL` et `LINKEDIN` en haut du fichier).
 - [ ] Ajouter les images dans `public/images/` : `proxmox.png` (capture de ton Proxmox) et `stage-metm.png` (facultatif).
-- [ ] Préparer 2-3 phrases sur ton stage METM et sur Flux Master.
+- [ ] Apprendre le pitch Flux Master (30 s) et trouver 1 exemple hardware + 1 exemple software de ton stage METM.
 - [ ] Apprendre l'antisèche (`ANTISECHE.md`), en priorité : adresse IP, VLAN, DHCP, DNS, machine virtuelle, MCP, erreur 403.
 - [ ] Répéter l'oral **à voix haute 3 fois**, chronométré.
 - [ ] Faire poser les questions de la partie 5 par quelqu'un, dans le désordre.

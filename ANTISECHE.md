@@ -49,14 +49,37 @@
 
 ## 2. Tes projets
 
-### ⭐ Flux Master (GitHub, Vercel)
-- **GitHub :** un site où l'on stocke le code d'un projet, avec tout l'historique des modifications.
-- **Branche :** une copie de travail du code. On fait ses modifications dessus sans toucher à la version en ligne.
-- **Pull request :** une demande pour fusionner sa branche dans la version principale, après relecture.
-- **Vercel :** le service qui met le site en ligne. Quand le code change sur GitHub, Vercel le publie automatiquement.
-- **Préproduction / production :** la préproduction est une version de test que personne ne voit. La production, c'est la vraie version, en ligne pour tout le monde.
-- **Bêta-testeurs :** des vrais utilisateurs qui testent l'appli avant sa version finale et donnent leur avis.
-- **À préparer toi-même :** en 2 phrases, **ce que fait Flux Master** et **pour qui**. Personne ne peut le faire à ta place.
+### ⭐ Flux Master : le pitch en 30 secondes
+> « Flux Master, c'est un comparateur d'annonces de voitures d'occasion. Il récupère les annonces de plus de 15 sites, comme AutoScout24 ou ParuVendu. Pour chaque voiture, il calcule le prix du marché et la vraie marge, une fois payés la carte grise, le transport et le contrôle technique. Ensuite il dit si c'est une bonne affaire, une voiture à négocier ou à éviter. C'est gratuit, et il est en bêta avec de vrais testeurs. »
+
+**Pour qui :** les gens qui achètent des voitures d'occasion pour les revendre, ou qui veulent juste savoir si un prix est correct.
+
+**Les mots à connaître (si on te pose des questions techniques) :**
+- **Robots de collecte (scrapers) :** des petits programmes qui vont lire les annonces sur les sites, tout seuls, plusieurs fois par jour. Ils respectent les règles des sites (pas de contournement des protections).
+- **GitHub Actions :** le service qui lance ces robots automatiquement, à heure fixe, sans que tu aies besoin d'allumer ton PC.
+- **Base de données (Supabase) :** l'endroit où toutes les annonces sont rangées, comme un énorme tableau Excel en ligne. La version gratuite est limitée à 500 Mo, donc il faut surveiller la place.
+- **Calcul automatique :** toutes les 5 minutes, la base recalcule la marge et le score des nouvelles annonces.
+- **Score de rentabilité :** une note sur 100. À partir de 85, l'annonce est marquée comme une très bonne affaire.
+- **Vercel :** le service qui met le site en ligne (comme pour ce portfolio).
+- **Version 18.47 :** chaque modification augmente le numéro de version, pour savoir exactement ce qui est en ligne.
+- **Connexion :** par Google ou Discord, il n'y a pas de mot de passe stocké sur le site (c'est plus sûr).
+
+**Le lien avec ta veille (à placer à l'oral, c'est ton meilleur argument) :**
+> « Sur Flux Master, j'ai deux agents IA qui se réveillent chaque semaine. Le lundi, l'un fait un audit : sécurité, taille de la base de données, robots en panne. Il a des règles strictes : il ne supprime rien, il ne met rien en ligne tout seul. Il propose ses corrections dans une demande de modification, et c'est moi qui relis et qui valide. »
+
+**Le chemin d'une modification :**
+- **Branche :** une copie de travail du code. On modifie dessus sans toucher à la version en ligne.
+- **Pull request :** une demande pour fusionner cette copie dans la version principale, après relecture.
+- **Préproduction :** une version de test que personne ne voit.
+- **Production :** la vraie version, en ligne pour tout le monde.
+
+**Si on te demande « c'est toi qui as tout codé ? » :** dis la vérité. « Je l'ai conçu et je le pilote, et je développe avec un agent IA (Claude Code). Mon rôle, c'est de décider ce qu'on fait, de relire et de valider avant la mise en ligne. »
+
+### ⭐ Stage chez METM : hardware et software
+- **Hardware (matériel) :** tout ce qu'on peut toucher. PC, écran, imprimante, disque dur, mémoire RAM, câbles, switch.
+- **Software (logiciel) :** les programmes. Windows, une suite bureautique, un antivirus, les logiciels métier de l'entreprise.
+- **À préparer toi-même (important) :** retrouve **1 exemple concret de chaque**. Par exemple, côté hardware, « j'ai changé un disque », « j'ai installé un poste » ou « j'ai branché une imprimante ». Côté software, « j'ai installé Windows », « j'ai installé un logiciel » ou « j'ai réglé un problème sur une application ». Prends ce que tu as **vraiment** fait.
+- **Phrase type :** « Pendant mon stage chez METM, j'ai travaillé sur le matériel et sur les logiciels. Par exemple, [ton exemple hardware] et [ton exemple software]. Ça m'a appris à [ce que tu as appris]. »
 
 ---
 
