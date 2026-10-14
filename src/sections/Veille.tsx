@@ -24,7 +24,7 @@ const SPECS: Spec[] = [
     def: "Un LLM (Large Language Model) est entraîné sur d'énormes quantités de texte et de code. Il prédit, mot après mot, la suite la plus probable : c'est ce qui lui permet d'écrire, résumer, traduire ou produire un script.",
     tools: "ChatGPT (OpenAI), Claude (Anthropic), Gemini (Google), Microsoft Copilot.", logos: ["openai", "claude", "gemini"],
     usage: "Écrire ou expliquer un script PowerShell / Bash, comprendre un message d'erreur, rédiger une procédure.",
-    me: "Je l'utilise comme répétiteur : quand je ne comprends pas une notion réseau, je demande une explication puis je vérifie dans le cours ou la documentation officielle.",
+    me: "Je m'en sers comme d'un prof particulier. Quand une notion réseau ne rentre pas, je demande une explication, puis je vérifie dans le cours ou la doc officielle.",
     limits: "Hallucinations (réponses fausses mais sûres d'elles), connaissances datées, fuite de données si on colle des mots de passe ou des configurations clients. Jamais de script lancé sans relecture.",
   },
   {
@@ -32,7 +32,7 @@ const SPECS: Spec[] = [
     def: "Surtout du machine learning : le modèle apprend le comportement « normal » d'un poste, d'un utilisateur ou d'un réseau, puis signale ce qui s'en écarte (connexion à 3 h du matin, processus qui chiffre des fichiers, flux inhabituel).",
     tools: "EDR / XDR : Microsoft Defender for Endpoint, CrowdStrike Falcon, SentinelOne ; détection réseau : Darktrace.",
     usage: "Repérer un ransomware avant qu'il chiffre le serveur de fichiers, isoler un poste compromis, trier des milliers d'alertes dans un SOC.",
-    me: "Le technicien ne lit plus les journaux ligne par ligne : il valide ou rejette des alertes déjà triées. Il doit comprendre pourquoi l'outil a levé l'alerte.",
+    me: "On ne lit plus les journaux ligne par ligne, on valide ou on rejette des alertes déjà triées. Encore faut-il comprendre pourquoi l'outil a sonné.",
     limits: "Faux positifs et faux négatifs. Et les attaquants utilisent aussi l'IA : hameçonnage crédible, deepfakes vocaux pour usurper un dirigeant.",
   },
   {
@@ -40,7 +40,7 @@ const SPECS: Spec[] = [
     def: "L'IA appliquée à l'exploitation informatique. Les modèles analysent métriques (CPU, RAM, disque, latence) et journaux pour détecter les anomalies, regrouper les alertes liées et prédire une panne.",
     tools: "Dynatrace (moteur Davis AI), Datadog (Watchdog), Splunk ITSI.", logos: ["dynatrace", "datadog"],
     usage: "Être prévenu qu'un disque sera plein dans 3 jours, trouver la cause racine quand 50 alertes arrivent en même temps.",
-    me: "On passe d'une supervision à seuils fixes (Nagios, Zabbix) à une supervision prédictive. Mais il faut savoir lire les métriques soi-même.",
+    me: "Avec Nagios ou Zabbix, on fixe des seuils à la main. Là, l'outil prévient avant la panne. Mais si je ne sais pas lire une courbe de CPU moi-même, je ne saurai pas s'il a raison.",
     limits: "Coûteux, demande beaucoup de données historiques propres, crée une dépendance à un éditeur.",
   },
   {
@@ -48,7 +48,7 @@ const SPECS: Spec[] = [
     def: "Des modèles spécialisés dans les données réseau (qualité Wi-Fi, trafic, configurations) qui diagnostiquent les problèmes de connexion et proposent ou appliquent des corrections.",
     tools: "Juniper Mist AI (assistant Marvis), Cisco AI Assistant, HPE Aruba Networking Central.", logos: ["cisco"],
     usage: "Répondre à « pourquoi le Wi-Fi de la salle B est lent ? », détecter un mauvais VLAN, vérifier une configuration avant de la pousser.",
-    me: "C'est cette spécialisation qui m'a fait comprendre mon retard : pour valider ce que l'IA propose, il faut maîtriser adressage, VLAN et routage. L'IA ne remplace pas les bases, elle les rend indispensables.",
+    me: "En lisant sur ces outils, j'ai vu que le réseau restait indispensable. Pour valider une correction proposée par l'IA, il faut soi-même maîtriser l'adressage, les VLAN et le routage.",
     limits: "Surtout sur du matériel récent et coûteux. Une mauvaise correction automatique peut couper le réseau de toute une entreprise.",
   },
   {
@@ -56,8 +56,8 @@ const SPECS: Spec[] = [
     def: "Un agent est un LLM qui ne se contente pas de répondre : il planifie des étapes et agit via des outils (lire un fichier, lancer une commande, interroger une API), observe le résultat et recommence jusqu'à l'objectif.",
     tools: "Claude Code, GitHub Copilot (mode agent), Gemini CLI, Cursor, n8n ; standard de connexion : MCP.", logos: ["claude", "github", "mcp"],
     usage: "Diagnostiquer un déploiement en lisant ses journaux, ouvrir un ticket, préparer une modification et la soumettre à validation.",
-    me: "Je l'utilise déjà sur Flux Master et pour ce portfolio. C'est mon innovation choisie, détaillée plus bas.",
-    limits: "Un agent qui agit peut aussi faire des erreurs qui agissent : permissions minimales et validation humaine obligatoires.",
+    me: "Je m'en sers déjà sur Flux Master et je m'en suis servi pour ce portfolio. C'est l'innovation que j'ai choisie, je la détaille plus bas.",
+    limits: "Un agent qui se trompe ne fait pas qu'écrire une bêtise, il l'exécute. Il lui faut donc le moins de droits possible et quelqu'un qui valide.",
   },
 ]
 
@@ -120,7 +120,7 @@ export function Veille() {
             <h3 className="mt-6 text-3xl font-semibold leading-tight tracking-[-0.03em] md:text-4xl">« L'IA a des spécialisations » : <span className="font-serif font-normal italic text-lilac">qu'est-ce que tu veux dire par là ?</span></h3>
             <div className="mt-6 space-y-4 text-[17px] leading-relaxed text-soft">
               <p>Une IA n'est pas « intelligente en général » : c'est un <strong className="text-white">modèle entraîné sur un type de données précis pour une tâche précise</strong>. Un modèle qui détecte une attaque dans des journaux n'a rien à voir avec ChatGPT : ni les mêmes données, ni la même technique, ni les mêmes capacités.</p>
-              <p>Toutes les IA actuelles sont des <strong className="text-white">IA « faibles » (spécialisées)</strong>. L'IA « générale », capable de tout faire comme un humain, n'existe pas. Pour un technicien SISR, j'en retiens <strong className="text-white">cinq</strong>, juste en dessous.</p>
+              <p>Toutes les IA actuelles sont des <strong className="text-white">IA « faibles » (spécialisées)</strong>. L'IA « générale », capable de tout faire comme un humain, n'existe pas. Pour un technicien SISR, j'en vois <strong className="text-white">cinq</strong> qui comptent vraiment. Les voici.</p>
             </div>
           </Reveal>
 

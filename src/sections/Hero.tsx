@@ -83,7 +83,7 @@ export function Hero() {
           transition={{ duration: 1.2, delay: 1.9 }}
           className="mt-14 hidden items-center justify-between border-t border-white/10 pt-6 text-[13px] text-mute md:flex"
         >
-          <span className="font-mono">IPSSI Val d'Europe — Option SISR</span>
+          <span className="font-mono">IPSSI Val d'Europe · Option SISR</span>
           <button onClick={() => scrollToId("profil")} className="flex items-center gap-2 text-soft hover:text-white">
             Faire défiler <ArrowDown size={15} style={{ animation: "float-y 2s ease-in-out infinite" }} />
           </button>

@@ -134,7 +134,7 @@ export function Innovation() {
           </h2>
           <Reveal delay={0.3}>
             <p className="mt-8 max-w-2xl text-xl leading-relaxed text-soft md:text-2xl">
-              Jusqu'ici, une IA <em>parlait</em>. Avec les agents et le MCP, elle <strong className="text-white">agit</strong> sur de vrais outils. Un changement direct pour les métiers de l'infrastructure.
+              Avant, une IA se contentait de <em>répondre</em>. Avec les agents et le MCP, elle <strong className="text-white">agit</strong> sur de vrais outils. Pour quelqu'un qui gère une infra, ça change beaucoup de choses.
             </p>
           </Reveal>
         </div>
@@ -213,11 +213,11 @@ export function Innovation() {
             <div className="mt-6 grid gap-4 md:grid-cols-2">
               <div className="rounded-2xl border border-mint/25 bg-mint/[0.05] p-6">
                 <div className="font-semibold text-mint">Ce que ça montre de positif</div>
-                <p className="mt-2 text-[15.5px] leading-relaxed text-soft">En quelques secondes, ce qui m'aurait pris plusieurs minutes. Et surtout, les <strong className="text-white">permissions ont fonctionné</strong> : l'erreur 403 prouve que l'IA ne peut pas sortir des droits que je lui ai donnés.</p>
+                <p className="mt-2 text-[15.5px] leading-relaxed text-soft">Il a fait en quelques secondes ce qui m'aurait pris plusieurs minutes. Et surtout, les <strong className="text-white">permissions ont tenu</strong> : l'erreur 403 montre que l'IA ne peut pas dépasser les droits que je lui ai donnés.</p>
               </div>
               <div className="rounded-2xl border border-amber/25 bg-amber/[0.05] p-6">
                 <div className="font-semibold text-amber">Ce que ça montre comme limites</div>
-                <p className="mt-2 text-[15.5px] leading-relaxed text-soft">Les outils ont des limites techniques (fichier tronqué), et la gestion des droits (OAuth, périmètre d'équipe) doit être bien comprise par l'administrateur. Exactement une compétence SISR.</p>
+                <p className="mt-2 text-[15.5px] leading-relaxed text-soft">L'outil a coupé un fichier trop gros, et j'ai dû comprendre moi-même les droits OAuth et les périmètres d'équipe pour débloquer la situation. C'est typiquement le travail d'un technicien SISR.</p>
               </div>
             </div>
           </div>
@@ -230,11 +230,11 @@ export function Innovation() {
               <Bot className="text-lilac" size={30} />
               <h3 className="mt-5 text-3xl font-semibold tracking-tight">Ce que ça change <span className="font-serif font-normal italic text-gradient">pour un technicien SISR</span></h3>
               <ul className="mt-6 space-y-4 text-[16px] leading-relaxed text-soft">
-                <li><strong className="text-white">Diagnostic</strong> — l'agent lit les journaux d'un serveur et propose la cause probable.</li>
-                <li><strong className="text-white">Support</strong> — il crée et documente les tickets, résume l'historique d'un incident.</li>
-                <li><strong className="text-white">Supervision</strong> — il explique une alerte en langage clair.</li>
-                <li><strong className="text-white">Documentation</strong> — il tient à jour les procédures à partir de ce qui a été fait.</li>
-                <li><strong className="text-white">Nouveau rôle</strong> — l'administrateur <em>déploie, sécurise et surveille</em> les serveurs MCP de l'entreprise.</li>
+                <li><strong className="text-white">Diagnostic</strong> : l'agent lit les journaux d'un serveur et propose la cause probable.</li>
+                <li><strong className="text-white">Support</strong> : il crée et documente les tickets, résume l'historique d'un incident.</li>
+                <li><strong className="text-white">Supervision</strong> : il explique une alerte en langage clair.</li>
+                <li><strong className="text-white">Documentation</strong> : il tient à jour les procédures à partir de ce qui a été fait.</li>
+                <li><strong className="text-white">Nouveau rôle</strong> : c'est l'administrateur qui installera et surveillera les serveurs MCP de l'entreprise.</li>
               </ul>
             </div>
           </Reveal>
@@ -254,9 +254,9 @@ export function Innovation() {
         {/* Avis */}
         <Reveal className="mt-28">
           <blockquote className="mx-auto max-w-5xl text-center text-[clamp(1.6rem,3.6vw,3rem)] font-medium leading-[1.2] tracking-[-0.03em]">
-            « Les agents IA ne vont pas remplacer les techniciens. Ils vont changer leur travail : moins de tâches répétitives, plus de contrôle et de sécurité. <span className="font-serif italic text-gradient">Il faut maîtriser les bases encore mieux qu'avant.</span> »
+            « Je ne crois pas que les agents IA vont remplacer les techniciens. Par contre, ils vont leur prendre les tâches répétitives. <span className="font-serif italic text-gradient">Et pour les surveiller, il faudra connaître les bases encore mieux qu'avant.</span> »
           </blockquote>
-          <p className="mx-auto mt-6 max-w-2xl text-center text-soft">On ne peut pas valider ce que propose une IA sur un VLAN si on ne sait pas soi-même ce qu'est un VLAN. C'est pour ça que j'ai décidé de rattraper sérieusement mon retard en réseau.</p>
+          <p className="mx-auto mt-6 max-w-2xl text-center text-soft">Si je ne sais pas ce qu'est un VLAN, je ne peux pas vérifier ce qu'une IA me propose sur un VLAN. C'est aussi pour ça que je rattrape mon retard en réseau.</p>
         </Reveal>
 
         <Reveal className="mt-20">

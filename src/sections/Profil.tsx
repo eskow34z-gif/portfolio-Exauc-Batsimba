@@ -5,35 +5,35 @@ import { Reveal, ScrollHighlight, SectionHeader } from "@/components/fx"
 
 const STEPS = [
   { n: "01", tag: "Constat", title: "Retard en réseau", text: "Moins d'implication en cours et en TP : adressage, sous-réseaux et VLAN moins maîtrisés que le reste.", color: "text-rose" },
-  { n: "02", tag: "Prise de conscience", title: "C'est le cœur du métier", text: "Un technicien SISR qui ne maîtrise pas le réseau ne peut ni dépanner ni sécuriser une infrastructure.", color: "text-amber" },
+  { n: "02", tag: "Prise de conscience", title: "Le réseau, c'est le métier", text: "Sans le réseau, on ne peut ni dépanner ni sécuriser quoi que ce soit. Je ne pouvais pas faire l'impasse.", color: "text-amber" },
   { n: "03", tag: "Action", title: "Rattrapage ciblé", text: "Reprise des bases (OSI / TCP-IP, IPv4, CIDR), TP refaits, pratique sur mon labo Proxmox, l'IA comme répétiteur.", color: "text-sky" },
-  { n: "04", tag: "Aujourd'hui", title: "En progression", text: "Et une leçon de méthode : planifier, ne laisser aucune matière de côté, demander de l'aide tôt.", color: "text-mint" },
+  { n: "04", tag: "Aujourd'hui", title: "En progression", text: "Je rattrape. Et j'ai retenu une chose : ne plus laisser une matière de côté parce qu'une autre m'intéresse plus.", color: "text-mint" },
 ]
 
 const TIMELINE = [
-  { when: "BTS SIO · 1re année", title: "Option SISR — IPSSI Val d'Europe", text: "Systèmes, réseaux, cybersécurité, support. Découverte de la virtualisation avec Proxmox." },
+  { when: "BTS SIO · 1re année", title: "Option SISR, IPSSI Val d'Europe", text: "Systèmes, réseaux, cybersécurité, support. Découverte de la virtualisation avec Proxmox." },
   { when: "Stage", title: "Stage chez METM", text: "Première immersion en entreprise sur un environnement informatique réel." },
   { when: "En parallèle", title: "Flux Master", text: "Conception et mise en production d'une plateforme web, aujourd'hui en version 18 avec des bêta-testeurs." },
   { when: "BTS SIO · 2e année", title: "Recherche d'alternance", text: "Objectif : un poste de technicien systèmes & réseaux pour pratiquer et monter en compétences." },
 ]
 
 const STRENGTHS = [
-  ["Autonomie", "je cherche, je teste, je corrige — plus de 18 versions de Flux Master."],
-  ["Esprit de production", "déployer, versionner, revenir en arrière, écouter les utilisateurs."],
-  ["IA maîtrisée", "un outil que je vérifie, jamais une source de vérité."],
-  ["Remise en question", "j'ai identifié mon retard en réseau et je le travaille."],
-  ["Curiosité", "une veille régulière et structurée."],
+  ["Autonomie", "je cherche, je teste, je corrige. Flux Master en est à sa version 18."],
+  ["Esprit de production", "quand une mise à jour casse quelque chose, je sais revenir en arrière et je lis les retours des utilisateurs."],
+  ["IA", "je m'en sers tous les jours, mais je vérifie ce qu'elle me dit."],
+  ["Remise en question", "j'ai vu mon retard en réseau et je le travaille."],
+  ["Curiosité", "je suis l'actu tech tous les jours (voir ma veille plus bas)."],
 ]
 
 export function Profil() {
   return (
     <section id="profil" className="relative mx-auto max-w-7xl px-5 py-32 md:px-10 md:py-44">
-      <SectionHeader index="01" eyebrow="Profil" title="Un technicien qui apprend vite" italic="et qui le prouve." />
+      <SectionHeader index="01" eyebrow="Profil" title="Qui je suis," italic="en vrai." />
 
       <ScrollHighlight
         className="mt-16 max-w-5xl text-[clamp(1.6rem,3.6vw,3rem)] font-medium leading-[1.18] tracking-[-0.025em]"
-        accent={["infrastructure,", "production,", "administrateur."]}
-        text="Ce qui m'attire, c'est tout ce qui fait tourner une infrastructure, du serveur au réseau. En parallèle, je maintiens une vraie application en production, ce qui m'oblige à penser comme un administrateur."
+        accent={["debout", "plante."]}
+        text="J'aime comprendre comment une infra tient debout : les serveurs, le réseau, ce qui se passe quand un service tombe. À côté des cours, je maintiens une appli en production. Donc je sais ce que c'est d'être celui qui doit réparer quand ça plante."
       />
 
       {/* Bilan honnête — entouré d'une bordure néon (OriginKit) */}
@@ -51,7 +51,7 @@ export function Profil() {
               Mon point faible de début d'année : <span className="font-serif font-normal italic text-amber">la matière réseau.</span>
             </h3>
             <p className="mt-5 max-w-3xl text-lg leading-relaxed text-soft">
-              Je préfère le dire clairement plutôt que le cacher : en début d'année, je ne me suis <strong className="text-white">pas assez impliqué dans les cours et TP réseau</strong>. J'ai mis mon énergie dans d'autres projets (Flux Master, l'IA) et j'ai pris du retard sur ce qui est pourtant le cœur de l'option SISR. Voici comment j'ai réagi.
+              Je préfère le dire clairement plutôt que le cacher : en début d'année, je ne me suis <strong className="text-white">pas assez impliqué dans les cours et TP réseau</strong>. Je passais mon temps sur Flux Master et sur l'IA, et j'ai pris du retard sur la base de l'option SISR. Voilà ce que j'ai fait ensuite.
             </p>
             <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {STEPS.map((s, i) => (
@@ -106,7 +106,7 @@ export function Profil() {
                   <span className="mt-0.5 grid h-7 w-7 shrink-0 place-items-center rounded-full bg-gradient-to-br from-violet/30 to-azure/30 ring-1 ring-white/10 transition group-hover:from-violet group-hover:to-azure">
                     <Check size={14} />
                   </span>
-                  <p className="text-[17px] leading-relaxed text-soft"><strong className="font-semibold text-white">{k}</strong> — {v}</p>
+                  <p className="text-[17px] leading-relaxed text-soft"><strong className="font-semibold text-white">{k}</strong> : {v}</p>
                 </li>
               </Reveal>
             ))}

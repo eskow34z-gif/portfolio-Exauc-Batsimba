@@ -42,7 +42,7 @@ export function Projets() {
               <div className="font-mono text-sm text-lilac">v<Counter to={18.47} decimals={2} /></div>
               <h3 className="mt-2 text-5xl font-semibold tracking-[-0.04em] md:text-7xl">Flux <span className="font-serif font-normal italic text-gradient">Master</span></h3>
               <p className="mt-5 text-lg leading-relaxed text-soft">
-                Une plateforme web que je conçois et maintiens moi-même, avec un programme bêta et un recueil d'avis utilisateurs (fonctionnalité la plus utile, prix jugé juste). Développée avec un agent IA : chaque modification passe par une branche et une relecture avant la mise en ligne.
+                Une plateforme web que j'ai conçue et que je maintiens. Des bêta-testeurs l'utilisent et me disent ce qui leur sert le plus et quel prix leur paraît juste. Je la développe avec un agent IA, mais rien ne part en ligne sans passer par une branche et une relecture.
               </p>
             </div>
             <div className="flex flex-wrap items-center gap-2">
@@ -73,7 +73,7 @@ export function Projets() {
             <ProjectImage src="/images/proxmox.png" alt="Interface Proxmox VE de mon infrastructure" fallback={<div className="flex flex-col items-center gap-3 font-mono text-sm text-soft"><Brand name="proxmox" color className="h-12 w-12" />proxmox-lab</div>} />
             <div className="mt-6 font-mono text-[11px] uppercase tracking-widest text-mute">Infrastructure · BTS SIO</div>
             <h3 className="mt-2 text-3xl font-semibold tracking-tight">Infrastructure Proxmox</h3>
-            <p className="mt-3 text-soft">Mise en place d'un hyperviseur Proxmox VE pour héberger machines virtuelles et conteneurs. Mon labo pour tester des services et pratiquer le réseau sans risquer un environnement de production.</p>
+            <p className="mt-3 text-soft">J'ai installé un hyperviseur Proxmox VE pour héberger des machines virtuelles et des conteneurs. C'est mon terrain d'entraînement : je teste des services et je pratique le réseau sans risquer de casser une vraie production.</p>
             <div className="mt-5 flex flex-wrap gap-2">{["Proxmox VE", "VM", "LXC", "Snapshots"].map((t) => <span key={t} className="rounded-full border border-white/10 px-3 py-1 font-mono text-xs text-soft">{t}</span>)}</div>
           </article>
         </Reveal>
@@ -83,7 +83,7 @@ export function Projets() {
             <div className="mt-6 font-mono text-[11px] uppercase tracking-widest text-mute">Stage · Entreprise</div>
             <h3 className="mt-2 text-3xl font-semibold tracking-tight">Stage chez METM</h3>
             {/* À COMPLÉTER : décris tes vraies missions (2-3 phrases concrètes) */}
-            <p className="mt-3 text-soft">Première immersion dans un environnement informatique réel : support aux utilisateurs et interventions techniques. J'y ai appris la rigueur et l'importance de bien communiquer avec les utilisateurs.</p>
+            <p className="mt-3 text-soft">Mon premier vrai contact avec l'informatique en entreprise : du support aux utilisateurs et des interventions techniques.</p>
             <div className="mt-5 flex flex-wrap gap-2">{["Support", "Terrain", "Entreprise"].map((t) => <span key={t} className="rounded-full border border-white/10 px-3 py-1 font-mono text-xs text-soft">{t}</span>)}</div>
           </article>
         </Reveal>

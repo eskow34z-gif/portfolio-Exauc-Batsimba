@@ -1,13 +1,13 @@
 # Préparation à l'oral : veille technologique et portfolio
 
-> Document de travail **personnel**, à ne pas mettre en ligne (il est exclue du déploiement Vercel via `.vercelignore`).
+> Document de travail **personnel**, à ne pas mettre en ligne (il est exclu du déploiement Vercel via `.vercelignore`).
 > Objectif : savoir **présenter**, **expliquer** et surtout **te défendre** face aux questions du jury.
 
 ---
 
 ## 1. Ton fil rouge (à retenir par cœur)
 
-> « L'IA n'est pas une seule technologie : ce sont des IA spécialisées. Je m'intéresse à celles qui changent le métier de technicien systèmes et réseaux. L'innovation la plus récente, ce sont les agents IA reliés aux outils grâce au MCP. Je l'ai testée moi-même, et ma conclusion, c'est qu'il faut maîtriser les bases encore mieux qu'avant. C'est pour ça que j'ai décidé de rattraper mon retard en réseau. »
+> « Quand on dit "l'IA", on parle en fait de plein d'IA différentes. Moi, je regarde celles qui changent le travail d'un technicien systèmes et réseaux. La plus récente, ce sont les agents IA branchés sur des outils grâce au MCP. Je m'en suis servi moi-même, et ce que j'en retiens, c'est qu'il faut connaître les bases encore mieux qu'avant. C'est aussi pour ça que je rattrape mon retard en réseau. »
 
 Tout ton oral doit revenir à cette idée. Si tu te perds, reviens-y.
 
@@ -104,7 +104,7 @@ Le jury valorise l'honnêteté et la méthode, pas le fait de tout savoir.
 > Trois principaux. L'injection de prompt : un texte piégé dans un ticket ou une page web donne des ordres cachés à l'agent ; en mai 2025, ça a permis de faire fuiter du code privé via le serveur MCP de GitHub. L'empoisonnement d'outil : un serveur malveillant cache des instructions dans la description de ses outils. Et les permissions excessives. Les parades : moindre privilège, serveurs officiels uniquement, validation humaine des actions sensibles et journalisation.
 
 **« Est-ce que l'IA va remplacer les techniciens ? »**
-> Je ne pense pas. Elle va remplacer des tâches répétitives, pas le métier. Le technicien devient celui qui valide, sécurise et surveille. Mais pour valider ce que propose une IA sur un VLAN, il faut savoir soi-même ce qu'est un VLAN : les bases deviennent encore plus importantes.
+> Je ne crois pas. Elle va prendre les tâches répétitives, c'est sûr. Mais quelqu'un doit vérifier ce qu'elle fait. Et si une IA me propose une config de VLAN, je dois savoir moi-même ce qu'est un VLAN pour dire si c'est bon. Donc les bases comptent encore plus qu'avant.
 
 ### Sur ta méthodologie
 

@@ -15,7 +15,7 @@ const STEPS = [
 const SOURCES: { name: string; logo?: BrandName; where: string; alert: string; role: string; trust: number }[] = [
   { name: "Reddit", logo: "reddit", where: "r/sysadmin, r/networking, r/homelab, r/Proxmox, r/cybersecurity, r/ClaudeAI", alert: "Abonnements, tri « Top de la semaine », flux RSS par subreddit (/r/sysadmin/.rss)", role: "Retours de vrais administrateurs : pannes, avis honnêtes, incidents vécus", trust: 3 },
   { name: "YouTube", logo: "youtube", where: "Chaînes tech, réseau et cybersécurité, conférences, démos d'outils", alert: "Abonnements + cloche sur les chaînes clés", role: "Comprendre en profondeur : tutoriels, démonstrations, explications longues", trust: 3 },
-  { name: "TikTok", logo: "tiktok", where: "Comptes tech et IA, actualités courtes", alert: "Algorithme entraîné + collection « veille »", role: "Détecter une tendance tôt. Jamais une source finale : un déclencheur", trust: 1 },
+  { name: "TikTok", logo: "tiktok", where: "Comptes tech et IA, actualités courtes", alert: "Algorithme entraîné + collection « veille »", role: "Repérer une tendance tôt. Je n'y crois jamais tel quel, ça me donne juste une piste à vérifier", trust: 1 },
   { name: "IA", where: "Claude, Gemini, ChatGPT", alert: "À la demande, quand une info m'arrive", role: "Expliquer, résumer, comparer ; mode recherche pour retrouver la source d'origine", trust: 2 },
 ]
 
@@ -30,10 +30,10 @@ const CHECKS = [
 const FICHE = [
   ["Date", "Juillet 2026"],
   ["Déclencheur", "Post Reddit sur une « nouvelle version de MCP »"],
-  ["Source vérifiée", "Blog officiel modelcontextprotocol.io — spécification du 28/07/2026"],
+  ["Source vérifiée", "Blog officiel modelcontextprotocol.io, spécification du 28/07/2026"],
   ["Résumé", "Le protocole devient « sans état » : plus de session à maintenir entre l'agent et le serveur."],
   ["Impact SISR", "Serveurs MCP plus simples à héberger, à répartir et à superviser."],
-  ["Fiabilité", "Élevée — source primaire"],
+  ["Fiabilité", "Élevée, c'est la source officielle"],
 ]
 
 export function Methode() {
@@ -48,7 +48,7 @@ export function Methode() {
         eyebrow="Méthodologie de veille & d'alerte"
         title="Comment je"
         italic="m'informe."
-        lead={<>Mes sources sont rapides mais pas toujours fiables : réseaux sociaux et IA. Ma méthode sert donc surtout à <strong className="text-white">trier et vérifier</strong>.</>}
+        lead={<>Je m'informe surtout sur Reddit, YouTube, TikTok et avec l'IA. C'est rapide, mais pas toujours fiable. Alors l'essentiel de ma méthode, c'est de <strong className="text-white">trier et vérifier</strong>.</>}
       />
 
       {/* Cycle en 5 étapes, la ligne se remplit au défilement */}
@@ -104,7 +104,7 @@ export function Methode() {
               {CHECKS.map(([k, v], i) => (
                 <li key={k} className="flex gap-4">
                   <span className="font-mono text-sm text-lilac">0{i + 1}</span>
-                  <p className="text-[15.5px] leading-relaxed text-soft"><strong className="text-white">{k}</strong> — {v}</p>
+                  <p className="text-[15.5px] leading-relaxed text-soft"><strong className="text-white">{k}</strong> : {v}</p>
                 </li>
               ))}
             </ol>

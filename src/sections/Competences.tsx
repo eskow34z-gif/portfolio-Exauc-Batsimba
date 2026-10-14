@@ -14,8 +14,8 @@ export function Competences() {
         index="02"
         eyebrow="Compétences"
         title="Ce que je sais faire,"
-        italic="sans exagérer."
-        lead="Des niveaux volontairement honnêtes : un jury ou un recruteur doit pouvoir me questionner sur tout ce qui est affiché ici."
+        italic="pour de vrai."
+        lead="J'ai mis des niveaux honnêtes. Si c'est écrit ici, vous pouvez me poser la question."
       />
 
       {/* Grille bento (21st.dev — Cybernetic Bento Grid) */}
@@ -27,7 +27,7 @@ export function Competences() {
               <h3 className="text-2xl font-semibold tracking-tight">Systèmes &amp; virtualisation</h3>
               <Brand name="proxmox" color className="h-6 w-6" />
             </div>
-            <p className="mt-3 max-w-md text-soft">Hyperviseur Proxmox VE : machines virtuelles et conteneurs, snapshots, un labo pour tester sans risque.</p>
+            <p className="mt-3 max-w-md text-soft">J'utilise Proxmox VE pour monter des machines virtuelles et des conteneurs. Les snapshots me permettent de tout casser sans risque, puis de revenir en arrière.</p>
             <div className="mt-10 space-y-5">
               <LevelBar label="Proxmox VE (VM, LXC, snapshots)" value={70} note="bon" />
               <LevelBar label="Linux (ligne de commande, services)" value={55} note="intermédiaire" />
@@ -41,7 +41,7 @@ export function Competences() {
               <h3 className="text-2xl font-semibold tracking-tight">Réseaux</h3>
               <span className="rounded-full border border-amber/40 bg-amber/10 px-2.5 py-0.5 font-mono text-[10.5px] uppercase tracking-widest text-amber">en rattrapage</span>
             </div>
-            <p className="mt-3 text-soft">Ma priorité de l'année : OSI / TCP-IP, adressage IPv4 et sous-réseaux, VLAN, DHCP / DNS, routage.</p>
+            <p className="mt-3 text-soft">C'est ma priorité cette année. Je reprends OSI / TCP-IP, l'adressage IPv4 et les sous-réseaux, puis les VLAN, DHCP, DNS et le routage.</p>
             <div className="mt-6"><LevelBar label="Bases réseau (OSI, IPv4, CIDR)" value={45} note="en progression" tone="amber" /></div>
           </BentoItem>
 
@@ -62,7 +62,7 @@ export function Competences() {
           <BentoItem className="md:col-span-2">
             <Icon><ShieldCheck size={22} /></Icon>
             <h3 className="text-xl font-semibold tracking-tight">Cybersécurité (bases)</h3>
-            <p className="mt-2 text-[15px] text-soft">Moindre privilège, gestion des accès (OAuth, jetons), sauvegardes, risques liés à l'IA (injection de prompt). Vécu concrètement : voir le cas réel dans la partie Innovation.</p>
+            <p className="mt-2 text-[15px] text-soft">Donner le moins de droits possible, gérer les accès (OAuth, jetons), faire des sauvegardes, connaître les risques des IA comme l'injection de prompt. J'ai d'ailleurs vu les droits d'accès bloquer un agent IA, c'est raconté dans la partie Innovation.</p>
           </BentoItem>
 
           <BentoItem className="md:col-span-2">
