@@ -6,8 +6,8 @@ import { Reveal, ScrollHighlight, SectionHeader } from "@/components/fx"
 const STEPS = [
   { n: "01", tag: "Constat", title: "Retard en réseau", text: "Moins d'implication en cours et en TP : adressage, sous-réseaux et VLAN moins maîtrisés que le reste.", color: "text-rose" },
   { n: "02", tag: "Prise de conscience", title: "Le réseau, c'est le métier", text: "Sans le réseau, on ne peut ni dépanner ni sécuriser quoi que ce soit. Je ne pouvais pas faire l'impasse.", color: "text-amber" },
-  { n: "03", tag: "Action", title: "Rattrapage ciblé", text: "Reprise des bases (OSI / TCP-IP, IPv4, CIDR), TP refaits, pratique sur mon labo Proxmox, l'IA comme répétiteur.", color: "text-sky" },
-  { n: "04", tag: "Aujourd'hui", title: "En progression", text: "Je rattrape. Et j'ai retenu une chose : ne plus laisser une matière de côté parce qu'une autre m'intéresse plus.", color: "text-mint" },
+  { n: "03", tag: "Action", title: "Rattrapage ciblé", text: "Je reprends les bases une par une, en commençant par l'adresse IP et les VLAN, avec l'IA comme prof particulier pour m'expliquer ce que je ne comprends pas.", color: "text-sky" },
+  { n: "04", tag: "Aujourd'hui", title: "C'est en cours", text: "Je n'ai pas encore rattrapé tout mon retard. Mais j'ai retenu une chose : ne plus laisser une matière de côté parce qu'une autre m'intéresse plus.", color: "text-mint" },
 ]
 
 const TIMELINE = [

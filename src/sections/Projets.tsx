@@ -71,10 +71,10 @@ export function Projets() {
         <Reveal>
           <article className="group bento-item h-full">
             <ProjectImage src="/images/proxmox.png" alt="Interface Proxmox VE de mon infrastructure" fallback={<div className="flex flex-col items-center gap-3 font-mono text-sm text-soft"><Brand name="proxmox" color className="h-12 w-12" />proxmox-lab</div>} />
-            <div className="mt-6 font-mono text-[11px] uppercase tracking-widest text-mute">Infrastructure · BTS SIO</div>
-            <h3 className="mt-2 text-3xl font-semibold tracking-tight">Infrastructure Proxmox</h3>
-            <p className="mt-3 text-soft">J'ai installé un hyperviseur Proxmox VE pour héberger des machines virtuelles et des conteneurs. C'est mon terrain d'entraînement : je teste des services et je pratique le réseau sans risquer de casser une vraie production.</p>
-            <div className="mt-5 flex flex-wrap gap-2">{["Proxmox VE", "VM", "LXC", "Snapshots"].map((t) => <span key={t} className="rounded-full border border-white/10 px-3 py-1 font-mono text-xs text-soft">{t}</span>)}</div>
+            <div className="mt-6 font-mono text-[11px] uppercase tracking-widest text-mute">TP · BTS SIO</div>
+            <h3 className="mt-2 text-3xl font-semibold tracking-tight">Virtualisation avec Proxmox</h3>
+            <p className="mt-3 text-soft">En TP, j'ai utilisé Proxmox pour créer des machines virtuelles : plusieurs ordinateurs simulés sur un seul serveur. Ça permet de tester des choses sans risquer de casser un vrai poste.</p>
+            <div className="mt-5 flex flex-wrap gap-2">{["Proxmox", "Machines virtuelles", "TP"].map((t) => <span key={t} className="rounded-full border border-white/10 px-3 py-1 font-mono text-xs text-soft">{t}</span>)}</div>
           </article>
         </Reveal>
         <Reveal delay={0.1}>

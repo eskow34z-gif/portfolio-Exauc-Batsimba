@@ -20,52 +20,52 @@ type Spec = {
 
 const SPECS: Spec[] = [
   {
-    key: "gen", name: "IA générative & LLM", short: "Générative",
-    def: "Un LLM (Large Language Model) est entraîné sur d'énormes quantités de texte et de code. Il prédit, mot après mot, la suite la plus probable : c'est ce qui lui permet d'écrire, résumer, traduire ou produire un script.",
-    tools: "ChatGPT (OpenAI), Claude (Anthropic), Gemini (Google), Microsoft Copilot.", logos: ["openai", "claude", "gemini"],
-    usage: "Écrire ou expliquer un script PowerShell / Bash, comprendre un message d'erreur, rédiger une procédure.",
-    me: "Je m'en sers comme d'un prof particulier. Quand une notion réseau ne rentre pas, je demande une explication, puis je vérifie dans le cours ou la doc officielle.",
-    limits: "Hallucinations (réponses fausses mais sûres d'elles), connaissances datées, fuite de données si on colle des mots de passe ou des configurations clients. Jamais de script lancé sans relecture.",
+    key: "gen", name: "IA générative", short: "Générative",
+    def: "C'est l'IA qu'on connaît tous : ChatGPT, Claude, Gemini. Elle a lu énormément de textes, et elle écrit une réponse en devinant, mot après mot, la suite la plus probable.",
+    tools: "ChatGPT, Claude, Gemini.", logos: ["openai", "claude", "gemini"],
+    usage: "Expliquer un message d'erreur, aider à écrire une procédure ou un petit script.",
+    me: "Je m'en sers comme d'un prof particulier : quand je ne comprends pas une notion, je lui demande de m'expliquer, puis je vérifie dans le cours.",
+    limits: "Elle peut se tromper avec beaucoup d'assurance (on appelle ça une « hallucination »). Et il ne faut jamais lui coller un mot de passe.",
   },
   {
     key: "cyber", name: "IA de cybersécurité", short: "Cybersécurité",
-    def: "Surtout du machine learning : le modèle apprend le comportement « normal » d'un poste, d'un utilisateur ou d'un réseau, puis signale ce qui s'en écarte (connexion à 3 h du matin, processus qui chiffre des fichiers, flux inhabituel).",
-    tools: "EDR / XDR : Microsoft Defender for Endpoint, CrowdStrike Falcon, SentinelOne ; détection réseau : Darktrace.",
-    usage: "Repérer un ransomware avant qu'il chiffre le serveur de fichiers, isoler un poste compromis, trier des milliers d'alertes dans un SOC.",
-    me: "On ne lit plus les journaux ligne par ligne, on valide ou on rejette des alertes déjà triées. Encore faut-il comprendre pourquoi l'outil a sonné.",
-    limits: "Faux positifs et faux négatifs. Et les attaquants utilisent aussi l'IA : hameçonnage crédible, deepfakes vocaux pour usurper un dirigeant.",
+    def: "Une IA qui apprend comment un ordinateur se comporte d'habitude, et qui donne l'alerte quand quelque chose est anormal. Par exemple un programme qui se met à chiffrer des centaines de fichiers d'un coup.",
+    tools: "Microsoft Defender (l'antivirus de Windows en version entreprise).",
+    usage: "Repérer un rançongiciel (ransomware) avant qu'il bloque tous les fichiers de l'entreprise.",
+    me: "Le technicien ne lit plus tout lui-même : l'IA trie les alertes, et lui décide si c'est grave ou pas.",
+    limits: "Elle peut sonner pour rien, ou rater une vraie attaque. Et les pirates utilisent aussi l'IA, par exemple pour écrire de faux e-mails très crédibles.",
   },
   {
-    key: "aiops", name: "AIOps : supervision intelligente", short: "AIOps",
-    def: "L'IA appliquée à l'exploitation informatique. Les modèles analysent métriques (CPU, RAM, disque, latence) et journaux pour détecter les anomalies, regrouper les alertes liées et prédire une panne.",
-    tools: "Dynatrace (moteur Davis AI), Datadog (Watchdog), Splunk ITSI.", logos: ["dynatrace", "datadog"],
-    usage: "Être prévenu qu'un disque sera plein dans 3 jours, trouver la cause racine quand 50 alertes arrivent en même temps.",
-    me: "Avec Nagios ou Zabbix, on fixe des seuils à la main. Là, l'outil prévient avant la panne. Mais si je ne sais pas lire une courbe de CPU moi-même, je ne saurai pas s'il a raison.",
-    limits: "Coûteux, demande beaucoup de données historiques propres, crée une dépendance à un éditeur.",
+    key: "aiops", name: "IA de supervision", short: "Supervision",
+    def: "Une IA qui surveille les serveurs (mémoire, disque, vitesse) et qui prévient avant qu'une panne arrive.",
+    tools: "Datadog.", logos: ["datadog"],
+    usage: "Être prévenu qu'un disque sera plein dans 3 jours, au lieu de le découvrir quand le serveur plante.",
+    me: "On passe de « je répare quand ça casse » à « je suis prévenu avant que ça casse ».",
+    limits: "Ces outils coûtent cher, et il faut quand même comprendre ce qu'ils affichent.",
   },
   {
     key: "net", name: "IA réseau", short: "Réseau",
-    def: "Des modèles spécialisés dans les données réseau (qualité Wi-Fi, trafic, configurations) qui diagnostiquent les problèmes de connexion et proposent ou appliquent des corrections.",
-    tools: "Juniper Mist AI (assistant Marvis), Cisco AI Assistant, HPE Aruba Networking Central.", logos: ["cisco"],
-    usage: "Répondre à « pourquoi le Wi-Fi de la salle B est lent ? », détecter un mauvais VLAN, vérifier une configuration avant de la pousser.",
-    me: "En lisant sur ces outils, j'ai vu que le réseau restait indispensable. Pour valider une correction proposée par l'IA, il faut soi-même maîtriser l'adressage, les VLAN et le routage.",
-    limits: "Surtout sur du matériel récent et coûteux. Une mauvaise correction automatique peut couper le réseau de toute une entreprise.",
+    def: "Une IA spécialisée dans le réseau : elle cherche pourquoi la connexion est lente ou coupée, et propose une correction.",
+    tools: "Cisco AI Assistant.", logos: ["cisco"],
+    usage: "Répondre à une question comme « pourquoi le Wi-Fi de la salle B est lent ? ».",
+    me: "C'est celle qui me concerne le plus : pour savoir si sa correction est bonne, il faut connaître le réseau. C'est une raison de plus de rattraper mon retard.",
+    limits: "Si elle applique une mauvaise correction toute seule, elle peut couper le réseau de toute l'entreprise.",
   },
   {
     key: "agents", name: "Agents IA", short: "Agents",
-    def: "Un agent est un LLM qui ne se contente pas de répondre : il planifie des étapes et agit via des outils (lire un fichier, lancer une commande, interroger une API), observe le résultat et recommence jusqu'à l'objectif.",
-    tools: "Claude Code, GitHub Copilot (mode agent), Gemini CLI, Cursor, n8n ; standard de connexion : MCP.", logos: ["claude", "github", "mcp"],
-    usage: "Diagnostiquer un déploiement en lisant ses journaux, ouvrir un ticket, préparer une modification et la soumettre à validation.",
-    me: "Je m'en sers déjà sur Flux Master et je m'en suis servi pour ce portfolio. C'est l'innovation que j'ai choisie, je la détaille plus bas.",
-    limits: "Un agent qui se trompe ne fait pas qu'écrire une bêtise, il l'exécute. Il lui faut donc le moins de droits possible et quelqu'un qui valide.",
+    def: "Une IA qui ne se contente pas de répondre : elle agit. Elle peut utiliser des outils (lire un fichier, consulter un site, lancer une action), regarder le résultat, puis continuer.",
+    tools: "Claude Code, et le MCP pour les brancher sur des outils.", logos: ["claude", "mcp"],
+    usage: "Chercher pourquoi un site ne marche plus en lisant ses journaux, ou préparer une modification à valider.",
+    me: "Je m'en sers sur Flux Master et je m'en suis servi pour ce portfolio. C'est l'innovation que j'ai choisie, je la détaille plus bas.",
+    limits: "Quand un agent se trompe, il ne fait pas qu'écrire une bêtise : il l'exécute. Il faut donc limiter ses droits et valider ce qu'il fait.",
   },
 ]
 
 const RINGS = [
-  { label: "Intelligence artificielle", text: "Le domaine entier : faire réaliser à une machine des tâches qui demandent de l'intelligence." },
-  { label: "Machine learning", text: "La machine apprend des règles à partir d'exemples au lieu qu'on les programme." },
-  { label: "Deep learning", text: "Des réseaux de neurones à nombreuses couches : images, son, texte." },
-  { label: "IA générative / LLM", text: "Entraînée à produire du contenu : ChatGPT, Claude, Gemini." },
+  { label: "Intelligence artificielle", text: "Le grand ensemble : faire faire à une machine des choses qui demandent normalement de l'intelligence." },
+  { label: "Machine learning", text: "La machine apprend toute seule à partir de milliers d'exemples, au lieu qu'on lui écrive toutes les règles." },
+  { label: "Deep learning", text: "Une façon plus poussée d'apprendre, inspirée du cerveau. Utilisée pour les images, la voix et le texte." },
+  { label: "IA générative", text: "Celle qui crée du texte ou des images : ChatGPT, Claude, Gemini." },
 ]
 
 export function Veille() {
@@ -119,8 +119,8 @@ export function Veille() {
             <span className="rounded-full border border-amber/40 bg-amber/10 px-3 py-1 font-mono text-[11px] uppercase tracking-widest text-amber">Question qu'on m'a posée</span>
             <h3 className="mt-6 text-3xl font-semibold leading-tight tracking-[-0.03em] md:text-4xl">« L'IA a des spécialisations » : <span className="font-serif font-normal italic text-lilac">qu'est-ce que tu veux dire par là ?</span></h3>
             <div className="mt-6 space-y-4 text-[17px] leading-relaxed text-soft">
-              <p>Une IA n'est pas « intelligente en général » : c'est un <strong className="text-white">modèle entraîné sur un type de données précis pour une tâche précise</strong>. Un modèle qui détecte une attaque dans des journaux n'a rien à voir avec ChatGPT : ni les mêmes données, ni la même technique, ni les mêmes capacités.</p>
-              <p>Toutes les IA actuelles sont des <strong className="text-white">IA « faibles » (spécialisées)</strong>. L'IA « générale », capable de tout faire comme un humain, n'existe pas. Pour un technicien SISR, j'en vois <strong className="text-white">cinq</strong> qui comptent vraiment. Les voici.</p>
+              <p>Une IA n'est pas « intelligente en général » : c'est un <strong className="text-white">modèle entraîné sur un type de données précis pour une tâche précise</strong>. L'IA qui repère un virus sur un ordinateur n'a rien à voir avec ChatGPT : elle n'a pas appris les mêmes choses et ne sait pas faire les mêmes choses.</p>
+              <p>Aujourd'hui, toutes les IA sont <strong className="text-white">spécialisées</strong> : chacune sait faire une chose. Une IA capable de tout faire comme un humain, ça n'existe pas encore. Pour un technicien SISR, j'en vois <strong className="text-white">cinq</strong> qui comptent vraiment. Les voici.</p>
             </div>
           </Reveal>
 

@@ -5,7 +5,7 @@ import { Reveal, SectionHeader } from "@/components/fx"
 import { Brand, type BrandName } from "@/components/fx/Brand"
 
 const STEPS = [
-  { t: "Cibler", d: "Des mots-clés liés à ma problématique : « AI SOC », « AIOps », « MCP », « agent IA », « Proxmox », « ransomware »." },
+  { t: "Cibler", d: "Des mots-clés liés à ma problématique : « IA », « agent IA », « MCP », « cybersécurité », « réseau »." },
   { t: "Collecter", d: "Les alertes viennent à moi : abonnements Reddit et YouTube, notifications, algorithme TikTok entraîné sur la tech." },
   { t: "Vérifier", d: "Je remonte à la source d'origine et je recoupe avec au moins 2 sources indépendantes." },
   { t: "Analyser", d: "Une IA résume ou explique, puis je me demande : qu'est-ce que ça change pour un technicien SISR ?" },
@@ -13,7 +13,7 @@ const STEPS = [
 ]
 
 const SOURCES: { name: string; logo?: BrandName; where: string; alert: string; role: string; trust: number }[] = [
-  { name: "Reddit", logo: "reddit", where: "r/sysadmin, r/networking, r/homelab, r/Proxmox, r/cybersecurity, r/ClaudeAI", alert: "Abonnements, tri « Top de la semaine », flux RSS par subreddit (/r/sysadmin/.rss)", role: "Retours de vrais administrateurs : pannes, avis honnêtes, incidents vécus", trust: 3 },
+  { name: "Reddit", logo: "reddit", where: "Des communautés tech et IA", alert: "Je suis abonné, et je regarde ce qui est le plus partagé de la semaine", role: "Retours de vrais administrateurs : pannes, avis honnêtes, incidents vécus", trust: 3 },
   { name: "YouTube", logo: "youtube", where: "Chaînes tech, réseau et cybersécurité, conférences, démos d'outils", alert: "Abonnements + cloche sur les chaînes clés", role: "Comprendre en profondeur : tutoriels, démonstrations, explications longues", trust: 3 },
   { name: "TikTok", logo: "tiktok", where: "Comptes tech et IA, actualités courtes", alert: "Algorithme entraîné + collection « veille »", role: "Repérer une tendance tôt. Je n'y crois jamais tel quel, ça me donne juste une piste à vérifier", trust: 1 },
   { name: "IA", where: "Claude, Gemini, ChatGPT", alert: "À la demande, quand une info m'arrive", role: "Expliquer, résumer, comparer ; mode recherche pour retrouver la source d'origine", trust: 2 },
@@ -31,8 +31,8 @@ const FICHE = [
   ["Date", "Juillet 2026"],
   ["Déclencheur", "Post Reddit sur une « nouvelle version de MCP »"],
   ["Source vérifiée", "Blog officiel modelcontextprotocol.io, spécification du 28/07/2026"],
-  ["Résumé", "Le protocole devient « sans état » : plus de session à maintenir entre l'agent et le serveur."],
-  ["Impact SISR", "Serveurs MCP plus simples à héberger, à répartir et à superviser."],
+  ["Résumé", "Nouvelle version du MCP, plus simple à faire tourner."],
+  ["Impact SISR", "Un technicien aura moins de mal à installer et surveiller ces serveurs."],
   ["Fiabilité", "Élevée, c'est la source officielle"],
 ]
 

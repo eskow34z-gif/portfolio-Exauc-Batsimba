@@ -1,9 +1,7 @@
 import { Brand, type BrandName } from "@/components/fx/Brand"
 
 const ITEMS: { name: BrandName; label: string }[] = [
-  { name: "proxmox", label: "Proxmox VE" },
-  { name: "linux", label: "Linux" },
-  { name: "bash", label: "Bash" },
+  { name: "proxmox", label: "Proxmox" },
   { name: "git", label: "Git" },
   { name: "github", label: "GitHub" },
   { name: "vercel", label: "Vercel" },

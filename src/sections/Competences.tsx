@@ -27,11 +27,9 @@ export function Competences() {
               <h3 className="text-2xl font-semibold tracking-tight">Systèmes &amp; virtualisation</h3>
               <Brand name="proxmox" color className="h-6 w-6" />
             </div>
-            <p className="mt-3 max-w-md text-soft">J'utilise Proxmox VE pour monter des machines virtuelles et des conteneurs. Les snapshots me permettent de tout casser sans risque, puis de revenir en arrière.</p>
+            <p className="mt-3 max-w-md text-soft">En TP, j'ai utilisé Proxmox : un logiciel qui permet de faire tourner plusieurs ordinateurs « virtuels » sur une seule machine physique.</p>
             <div className="mt-10 space-y-5">
-              <LevelBar label="Proxmox VE (VM, LXC, snapshots)" value={70} note="bon" />
-              <LevelBar label="Linux (ligne de commande, services)" value={55} note="intermédiaire" />
-              <LevelBar label="Windows (poste, support)" value={60} note="intermédiaire" />
+              <LevelBar label="Virtualisation avec Proxmox" value={30} note="vu en TP" tone="amber" />
             </div>
           </BentoItem>
 
@@ -41,8 +39,8 @@ export function Competences() {
               <h3 className="text-2xl font-semibold tracking-tight">Réseaux</h3>
               <span className="rounded-full border border-amber/40 bg-amber/10 px-2.5 py-0.5 font-mono text-[10.5px] uppercase tracking-widest text-amber">en rattrapage</span>
             </div>
-            <p className="mt-3 text-soft">C'est ma priorité cette année. Je reprends OSI / TCP-IP, l'adressage IPv4 et les sous-réseaux, puis les VLAN, DHCP, DNS et le routage.</p>
-            <div className="mt-6"><LevelBar label="Bases réseau (OSI, IPv4, CIDR)" value={45} note="en progression" tone="amber" /></div>
+            <p className="mt-3 text-soft">C'est mon point faible, je le dis franchement. Je reprends les bases une par une : l'adresse IP, les VLAN, puis DHCP et DNS.</p>
+            <div className="mt-6"><LevelBar label="Bases réseau" value={20} note="débutant, en rattrapage" tone="amber" /></div>
           </BentoItem>
 
           <BentoItem>
@@ -62,7 +60,7 @@ export function Competences() {
           <BentoItem className="md:col-span-2">
             <Icon><ShieldCheck size={22} /></Icon>
             <h3 className="text-xl font-semibold tracking-tight">Cybersécurité (bases)</h3>
-            <p className="mt-2 text-[15px] text-soft">Donner le moins de droits possible, gérer les accès (OAuth, jetons), faire des sauvegardes, connaître les risques des IA comme l'injection de prompt. J'ai d'ailleurs vu les droits d'accès bloquer un agent IA, c'est raconté dans la partie Innovation.</p>
+            <p className="mt-2 text-[15px] text-soft">Une règle simple : ne donner à un outil que les droits dont il a vraiment besoin. Je l'ai vu en vrai, quand un agent IA a été bloqué parce qu'il n'avait pas l'autorisation (voir la partie Innovation).</p>
           </BentoItem>
 
           <BentoItem className="md:col-span-2">

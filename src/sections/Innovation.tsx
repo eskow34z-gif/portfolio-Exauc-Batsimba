@@ -92,13 +92,13 @@ const TIMELINE = [
   { d: "2025", t: "Adoption par OpenAI, Google et Microsoft : un standard commun à tout le secteur." },
   { d: "Mai 2025", t: "Première faille médiatisée : injection de prompt via le serveur MCP GitHub, fuite de code privé." },
   { d: "9 déc. 2025", t: "Le MCP est confié à l'Agentic AI Foundation (Linux Foundation)." },
-  { d: "28 juil. 2026", t: "Spécification « sans état » : plus simple à héberger et à faire monter en charge." },
+  { d: "28 juil. 2026", t: "Nouvelle version du protocole, plus simple à installer et à faire tourner sur un serveur." },
 ]
 
 const RISKS = [
   { icon: ShieldAlert, t: "Injection de prompt", d: "Un texte piégé (ticket, page web, issue GitHub) donne des ordres cachés à l'agent.", fix: "Tout contenu externe est non fiable ; validation humaine avant chaque action sensible." },
-  { icon: Skull, t: "Empoisonnement d'outil", d: "Un serveur MCP malveillant cache des instructions dans la description de ses outils.", fix: "Uniquement des serveurs officiels ou audités, comme pour un logiciel." },
-  { icon: KeyRound, t: "Permissions excessives", d: "Un agent avec des droits administrateur peut tout casser en une erreur.", fix: "Moindre privilège, jetons limités, journalisation de toutes les actions." },
+  { icon: Skull, t: "Outil piégé", d: "Un faux serveur MCP, installé depuis une source douteuse, peut cacher des ordres à l'agent.", fix: "N'installer que des serveurs officiels, comme on le ferait pour n'importe quel logiciel." },
+  { icon: KeyRound, t: "Permissions excessives", d: "Un agent avec des droits administrateur peut tout casser en une erreur.", fix: "Ne lui donner que les droits nécessaires, et garder une trace de tout ce qu'il fait." },
 ]
 
 const SOURCES = [
@@ -168,7 +168,7 @@ export function Innovation() {
           <div className="glass overflow-hidden rounded-[28px] p-6 md:p-10">
             <div className="flex flex-wrap items-end justify-between gap-4">
               <h3 className="text-3xl font-semibold tracking-tight">Comment ça <span className="font-serif font-normal italic text-gradient">fonctionne</span></h3>
-              <span className="font-mono text-xs text-mute">JSON-RPC 2.0 · stdio (local) ou HTTP + OAuth (distant)</span>
+              <span className="font-mono text-xs text-mute">L'agent passe par un « serveur MCP » pour parler à chaque outil</span>
             </div>
             <div className="mt-4"><McpDiagram /></div>
             <div className="grid gap-4 border-t border-white/10 pt-8 md:grid-cols-3">
@@ -217,7 +217,7 @@ export function Innovation() {
               </div>
               <div className="rounded-2xl border border-amber/25 bg-amber/[0.05] p-6">
                 <div className="font-semibold text-amber">Ce que ça montre comme limites</div>
-                <p className="mt-2 text-[15.5px] leading-relaxed text-soft">L'outil a coupé un fichier trop gros, et j'ai dû comprendre moi-même les droits OAuth et les périmètres d'équipe pour débloquer la situation. C'est typiquement le travail d'un technicien SISR.</p>
+                <p className="mt-2 text-[15.5px] leading-relaxed text-soft">L'outil a coupé un fichier trop gros. Et pour débloquer l'accès, il a fallu que je donne moi-même l'autorisation dans mon compte Vercel. Gérer qui a le droit de faire quoi, c'est justement le travail d'un technicien.</p>
               </div>
             </div>
           </div>
