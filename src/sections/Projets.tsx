@@ -99,9 +99,8 @@ export function Projets() {
             <ProjectImage src="/images/stage-metm.png" alt="Réalisation pendant le stage chez METM" fallback={<div className="flex flex-col items-center gap-3 font-mono text-sm text-soft"><Briefcase size={44} className="text-lilac" />stage-metm</div>} />
             <div className="mt-6 font-mono text-[11px] uppercase tracking-widest text-mute">Stage · Entreprise</div>
             <h3 className="mt-2 text-3xl font-semibold tracking-tight">Stage chez METM</h3>
-            {/* À COMPLÉTER si possible : 1 ou 2 exemples concrets de ce que tu as fait */}
-            <p className="mt-3 text-soft">Mon premier stage en entreprise, où j'ai touché aux deux côtés de l'informatique : le matériel (hardware) et les logiciels (software).</p>
-            <div className="mt-5 flex flex-wrap gap-2">{["Hardware", "Software", "Entreprise"].map((t) => <span key={t} className="rounded-full border border-white/10 px-3 py-1 font-mono text-xs text-soft">{t}</span>)}</div>
+                        <p className="mt-3 text-soft">Mon premier stage en entreprise. J'y ai installé des postes de travail et des logiciels Windows, côté matériel (hardware) comme côté logiciel (software).</p>
+            <div className="mt-5 flex flex-wrap gap-2">{["Installation de postes", "Windows", "Logiciels"].map((t) => <span key={t} className="rounded-full border border-white/10 px-3 py-1 font-mono text-xs text-soft">{t}</span>)}</div>
           </article>
         </Reveal>
       </div>

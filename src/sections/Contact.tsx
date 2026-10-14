@@ -26,12 +26,12 @@ export function Contact() {
           </div>
         </Reveal>
         <h2 className="mt-8 text-[clamp(3rem,9vw,8.5rem)] font-semibold leading-[0.92] tracking-[-0.055em]">
-          <BlurText text="Une alternance" stagger={0.04} />
+          <BlurText text="Une question ?" stagger={0.04} />
           <br />
-          <span className="font-serif font-normal italic tracking-[-0.03em]"><BlurText text="à me proposer ?" delay={0.4} stagger={0.04} gradient /></span>
+          <span className="font-serif font-normal italic tracking-[-0.03em]"><BlurText text="Écrivez-moi." delay={0.4} stagger={0.04} gradient /></span>
         </h2>
         <Reveal delay={0.3}>
-          <p className="mx-auto mt-8 max-w-xl text-xl leading-relaxed text-soft">Je cherche une alternance de technicien systèmes &amp; réseaux. Je sais où sont mes points faibles et je les travaille. Écrivez-moi, je réponds vite.</p>
+          <p className="mx-auto mt-8 max-w-xl text-xl leading-relaxed text-soft">Sur mon portfolio, ma veille ou Flux Master, je réponds avec plaisir.</p>
         </Reveal>
         <Reveal delay={0.45}>
           <div className="mt-12 flex flex-wrap justify-center gap-3">

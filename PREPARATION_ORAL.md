@@ -18,7 +18,7 @@ Tout ton oral doit revenir à cette idée. Si tu te perds, reviens-y.
 | Temps | Partie | Ce que tu dis | Ce que tu montres |
 |---|---|---|---|
 | 0:00 | Accroche | « Quand on dit "l'IA", on pense à ChatGPT. Mais l'IA qui détecte un ransomware n'a rien à voir avec ChatGPT. » | Titre de la section Veille |
-| 0:45 | Présentation | Nom, BTS SIO SISR, recherche d'alternance, 1 phrase par projet | Hero + Projets |
+| 0:45 | Présentation | Nom, BTS SIO SISR, 1 phrase par projet | Hero + Projets |
 | 2:00 | Bilan honnête | Ton retard en réseau, ta prise de conscience, ce que tu fais | Carte « Bilan personnel » |
 | 3:00 | Problématique | La lire telle quelle | Encadré Problématique |
 | 3:30 | Les 5 spécialisations | 30 s chacune : définition, 1 outil réel, 1 usage, 1 limite | Les onglets |
@@ -134,7 +134,7 @@ Les réponses sont volontairement simples. Dis-les avec tes mots, pas par cœur.
 > « Je l'ai conçu et je le pilote, et je développe avec un agent IA. Mon rôle, c'est de décider, de relire et de valider avant la mise en ligne. »
 
 **« Qu'est-ce que tu as fait pendant ton stage ? »**
-> « J'ai travaillé côté matériel (hardware) et côté logiciel (software). Par exemple… » *(donne 1 exemple vrai de chaque, prépare-les avant mercredi).*
+> « J'ai installé des postes de travail et des logiciels Windows. Donc à la fois du matériel (hardware) et du logiciel (software). » Si on te demande comment tu t'y prenais, décris les étapes que tu as vraiment faites (voir `ANTISECHE.md`).
 
 ### La phrase de secours (à garder en tête)
 
@@ -149,7 +149,7 @@ Un jury préfère mille fois ça à une réponse inventée.
 - [ ] Relire **tout** le portfolio et corriger ce qui n'est pas exact te concernant (stage METM, niveaux, parcours).
 - [ ] Compléter l'e-mail et le lien LinkedIn dans la section Contact (`src/sections/Contact.tsx`, constantes `EMAIL` et `LINKEDIN` en haut du fichier).
 - [ ] Ajouter les images dans `public/images/` : `proxmox.png` (capture de ton Proxmox) et `stage-metm.png` (facultatif).
-- [ ] Apprendre le pitch Flux Master (30 s) et trouver 1 exemple hardware + 1 exemple software de ton stage METM.
+- [ ] Apprendre le pitch Flux Master (30 s) et la phrase sur ton stage METM.
 - [ ] Apprendre l'antisèche (`ANTISECHE.md`), en priorité : adresse IP, VLAN, DHCP, DNS, machine virtuelle, MCP, erreur 403.
 - [ ] Répéter l'oral **à voix haute 3 fois**, chronométré.
 - [ ] Faire poser les questions de la partie 5 par quelqu'un, dans le désordre.

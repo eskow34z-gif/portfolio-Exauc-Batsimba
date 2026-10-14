@@ -75,11 +75,13 @@
 
 **Si on te demande « c'est toi qui as tout codé ? » :** dis la vérité. « Je l'ai conçu et je le pilote, et je développe avec un agent IA (Claude Code). Mon rôle, c'est de décider ce qu'on fait, de relire et de valider avant la mise en ligne. »
 
-### ⭐ Stage chez METM : hardware et software
-- **Hardware (matériel) :** tout ce qu'on peut toucher. PC, écran, imprimante, disque dur, mémoire RAM, câbles, switch.
-- **Software (logiciel) :** les programmes. Windows, une suite bureautique, un antivirus, les logiciels métier de l'entreprise.
-- **À préparer toi-même (important) :** retrouve **1 exemple concret de chaque**. Par exemple, côté hardware, « j'ai changé un disque », « j'ai installé un poste » ou « j'ai branché une imprimante ». Côté software, « j'ai installé Windows », « j'ai installé un logiciel » ou « j'ai réglé un problème sur une application ». Prends ce que tu as **vraiment** fait.
-- **Phrase type :** « Pendant mon stage chez METM, j'ai travaillé sur le matériel et sur les logiciels. Par exemple, [ton exemple hardware] et [ton exemple software]. Ça m'a appris à [ce que tu as appris]. »
+### ⭐ Stage chez METM : installation de postes et de logiciels Windows
+- **Ta phrase :** « Pendant mon stage chez METM, j'ai installé des postes de travail et des logiciels Windows. C'est à la fois du matériel (hardware) et du logiciel (software). »
+- **Hardware (matériel) :** tout ce qu'on peut toucher. PC, écran, clavier, imprimante, câbles.
+- **Software (logiciel) :** les programmes. Windows, la suite bureautique, l'antivirus, les logiciels de l'entreprise.
+- **« Installer un poste », ça veut dire quoi :** préparer un ordinateur pour qu'un salarié puisse travailler dessus. En général : le brancher (écran, clavier, réseau), installer ou configurer Windows, créer ou connecter le compte de l'utilisateur, puis installer les logiciels dont il a besoin.
+- **Si on te demande les étapes :** raconte seulement celles que **tu as vraiment faites**. Si tu ne te souviens pas d'un détail : « je ne me souviens plus du détail, mais je faisais [ce dont tu te souviens] ».
+- **Ce que tu peux dire avoir appris :** « être rigoureux, parce qu'un poste mal installé bloque quelqu'un dans son travail ».
 
 ---
 

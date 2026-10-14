@@ -34,7 +34,7 @@ export function Hero() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-mint opacity-60" />
             <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-mint" />
           </span>
-          Disponible en alternance · BTS SIO SISR
+          BTS SIO · Option SISR
         </motion.div>
 
         <h1 className="mt-8 text-[clamp(4.4rem,18vw,11.5rem)] md:text-[clamp(4rem,13vw,11.5rem)] font-semibold leading-[0.86] tracking-[-0.06em]">

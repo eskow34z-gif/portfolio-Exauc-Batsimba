@@ -12,9 +12,9 @@ const STEPS = [
 
 const TIMELINE = [
   { when: "BTS SIO · 1re année", title: "Option SISR, IPSSI Val d'Europe", text: "Systèmes, réseaux, cybersécurité, support. Découverte de la virtualisation avec Proxmox." },
-  { when: "Stage", title: "Stage chez METM", text: "Premier stage en entreprise, côté matériel (hardware) et logiciels (software)." },
+  { when: "Stage", title: "Stage chez METM", text: "Premier stage en entreprise : installation de postes de travail et de logiciels Windows." },
   { when: "En parallèle", title: "Flux Master", text: "Un comparateur d'annonces de voitures d'occasion que j'ai créé, aujourd'hui en version 18 avec des bêta-testeurs." },
-  { when: "BTS SIO · 2e année", title: "Recherche d'alternance", text: "Objectif : un poste de technicien systèmes & réseaux pour pratiquer et monter en compétences." },
+  { when: "BTS SIO · 2e année", title: "Veille et rattrapage", text: "Je suis l'actualité des IA spécialisées et des agents IA, et je reprends les bases du réseau." },
 ]
 
 const STRENGTHS = [
